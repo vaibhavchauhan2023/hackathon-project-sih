@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pappy Learning Platform</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #361169 0%, #532093 50%, #F09738 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Feather Bold", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-section {
+            margin-bottom: 30px;
+        }
+
+        .logo-section img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .logo-section h1 {
+            color: #361169;
+            font-size: 2.5rem;
+            margin: 0;
+            font-family: "Feather Bold", sans-serif;
+        }
+
+        .logo-section p {
+            color: #666;
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: #361169;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #F09738;
+            box-shadow: 0 0 0 3px rgba(240, 151, 56, 0.1);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #F09738, #ff6b35);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Feather Bold", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(240, 151, 56, 0.3);
+        }
+
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .signup-link {
+            color: #532093;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link:hover {
+            color: #F09738;
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c62828;
+            display: none;
+        }
+
+        .success-message {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2e7d32;
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            margin: 20px 0;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #F09738;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .mascot-welcome {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        .mascot-welcome img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .mascot-welcome p {
+            margin: 0;
+            color: #361169;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .logo-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Pappy Logo">
+            <h1>Welcome Back!</h1>
+            <p>Ready to continue your learning adventure? 🚀</p>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="login-btn" id="loginBtn">
+                🎮 Start Learning Adventure
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Logging you in...</p>
+        </div>
+
+        <p>Don't have an account? <a href="/signup" class="signup-link" id="signupLink">Sign up here</a></p>
+    </div>
+
+    <div class="mascot-welcome">
+        <img src="../Asset/Images/upf.png" alt="Pappy Mascot">
+        <p>Hi there! I'm Pappy, your learning buddy! Ready to explore together? 🌟</p>
+    </div>
+
+    <script>
+        class LoginManager {
+            constructor() {
+                this.form = document.getElementById('loginForm');
+                this.emailInput = document.getElementById('email');
+                this.passwordInput = document.getElementById('password');
+                this.loginBtn = document.getElementById('loginBtn');
+                this.loading = document.getElementById('loading');
+                this.errorMessage = document.getElementById('errorMessage');
+                this.successMessage = document.getElementById('successMessage');
+                this.signupLink = document.getElementById('signupLink');
+                
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.checkExistingAuth();
+            }
+
+            setupEventListeners() {
+                this.form.addEventListener('submit', (e) => this.handleLogin(e));
+                this.signupLink.addEventListener('click', (e) => this.showSignup(e));
+                
+                // Add some fun interactions
+                this.emailInput.addEventListener('focus', () => this.playSound('focus'));
+                this.passwordInput.addEventListener('focus', () => this.playSound('focus'));
+            }
+
+            checkExistingAuth() {
+                // Check if user is already logged in
+                const token = localStorage.getItem('authToken');
+                if (token) {
+                    this.redirectToHome();
+                }
+            }
+
+            async handleLogin(e) {
+                e.preventDefault();
+                
+                const email = this.emailInput.value.trim();
+                const password = this.passwordInput.value;
+
+                if (!email || !password) {
+                    this.showError('Please fill in all fields!');
+                    return;
+                }
+
+                this.setLoading(true);
+
+                try {
+                    const response = await fetch('/api/auth/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            email: email,
+                            password: password
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Store authentication data
+                        localStorage.setItem('authToken', data.token);
+                        localStorage.setItem('userData', JSON.stringify(data.user));
+                        
+                        this.showSuccess('Login successful! Redirecting to your learning adventure...');
+                        this.playSound('success');
+                        
+                        // Redirect to home page after a short delay
+                        setTimeout(() => {
+                            this.redirectToHome();
+                        }, 1500);
+                    } else {
+                        this.showError(data.error || 'Login failed. Please try again.');
+                        this.playSound('error');
+                    }
+                } catch (error) {
+                    console.error('Login error:', error);
+                    this.showError('Network error. Please check your connection and try again.');
+                    this.playSound('error');
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+
+            showSignup(e) {
+                e.preventDefault();
+                // Redirect to signup page
+                window.location.href = '/signup';
+            }
+
+            setLoading(loading) {
+                this.loginBtn.disabled = loading;
+                this.loading.style.display = loading ? 'block' : 'none';
+                
+                if (loading) {
+                    this.loginBtn.textContent = 'Logging in...';
+                } else {
+                    this.loginBtn.innerHTML = '🎮 Start Learning Adventure';
+                }
+            }
+
+            showError(message) {
+                this.errorMessage.textContent = message;
+                this.errorMessage.style.display = 'block';
+                this.successMessage.style.display = 'none';
+                
+                // Auto-hide after 5 seconds
+                setTimeout(() => {
+                    this.errorMessage.style.display = 'none';
+                }, 5000);
+            }
+
+            showSuccess(message) {
+                this.successMessage.textContent = message;
+                this.successMessage.style.display = 'block';
+                this.errorMessage.style.display = 'none';
+            }
+
+            redirectToHome() {
+                // Redirect to the home page (web pages/index.html)
+                window.location.href = '/home';
+            }
+
+            playSound(type) {
+                // Simple sound feedback (in a real app, you'd play actual sounds)
+                console.log(`Playing ${type} sound`);
+            }
+        }
+
+        // Initialize login manager when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new LoginManager();
+        });
+
+        // Add some fun animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate the mascot
+            const mascot = document.querySelector('.mascot-welcome');
+            setTimeout(() => {
+                mascot.style.animation = 'bounceIn 1s ease-out';
+            }, 1000);
+
+            // Add floating animation to the mascot
+            setInterval(() => {
+                mascot.style.transform = 'translateY(-5px)';
+                setTimeout(() => {
+                    mascot.style.transform = 'translateY(0)';
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

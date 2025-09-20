@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Heroes!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+            background-color: #361169;
+            color: #ffffff;
+        }
+
+        :root {
+            --primary-color: #F09738;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .mascot-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #4A1E8C;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffb154;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-4 transition-opacity duration-500 ease-in-out" style="opacity: 0;">
+
+    <header
+        class="sticky top-4 z-50 w-full max-w-5xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div id="mascot" class="mascot-float"><svg width="80" height="90" viewBox="0 0 150 180" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M128.5 76.5C133.5 61.5 125 47.5 119 43C113 38.5 106 43 106 43L111 68L128.5 76.5Z"
+                        fill="#9B59B6" />
+                    <path d="M21.5 76.5C16.5 61.5 25 47.5 31 43C37 38.5 44 43 44 43L39 68L21.5 76.5Z" fill="#9B59B6" />
+                    <path
+                        d="M117.433 138.995C113.833 144.328 107.5 147.5 102.5 147.5C92.5 147.5 86.5 137.5 82 135.5C77.5 133.5 72.5 133.5 68 135.5C63.5 137.5 57.5 147.5 47.5 147.5C42.5 147.5 36.1667 144.328 32.5667 138.995C24.4667 127.095 24.1667 101.5 24.1667 101.5C36.6667 96.5 75 95.5 125.833 101.5C125.833 101.5 125.533 127.095 117.433 138.995Z"
+                        fill="#8E44AD" />
+                    <ellipse cx="75" cy="100" rx="60" ry="65" fill="#8E44AD" />
+                    <ellipse cx="75" cy="115" rx="45" ry="40" fill="#9B59B6" />
+                    <path d="M75 35C72.3333 30.3333 71.5 19.5 75 15C78.5 19.5 77.6667 30.3333 75 35Z" fill="#8E44AD" />
+                    <path d="M90 30C86.5 24.5 82.5 15 88 10C93.5 15 93.5 24.5 90 30Z" fill="#8E44AD" />
+                    <path d="M60 30C63.5 24.5 67.5 15 62 10C56.5 15 56.5 24.5 60 30Z" fill="#8E44AD" />
+                    <circle cx="58" cy="70" r="18" fill="white" />
+                    <circle cx="92" cy="70" r="18" fill="white" />
+                    <path d="M75 82C81.5 85 85 82.8333 87 80C82.5 79.5 67.5 79.5 63 80C65 82.8333 68.5 85 75 82Z"
+                        fill="#F09738" />
+                    <path d="M75 75C85 75 87 80 87 80C82.5 79.5 67.5 79.5 63 80C63 80 65 75 75 75Z" fill="#F39C12" />
+                    <g id="mascot-eyes">
+                        <circle cx="58" cy="70" r="9" fill="#2C3E50" />
+                        <circle cx="92" cy="70" r="9" fill="#2C3E50" />
+                    </g>
+                    <path
+                        d="M57 159C57 163.418 53.4183 167 49 167C44.5817 167 41 163.418 41 159C41 156.5 44 152 49 152C54 152 57 156.5 57 159Z"
+                        fill="#F09738" />
+                    <path
+                        d="M109 159C109 163.418 105.418 167 101 167C96.5817 167 93 163.418 93 159C93 156.5 96 152 101 152C106 152 109 156.5 109 159Z"
+                        fill="#F09738" />
+                </svg></div>
+            <h1 class="text-2xl md:text-3xl font-bold" style="color: var(--primary-color);">Everyday Heroes</h1>
+        </div>
+        <a href="interactive_story.html"
+            class="bg-[#F09738] text-white font-bold py-2 px-6 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105">Back</a>
+    </header>
+
+    <main class="w-full max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🦸 The Park Protector</h2>
+            <p class="text-lg leading-relaxed">Maya loved her neighborhood park, but she was sad to see candy wrappers
+                and empty bottles littering the grass. "This is a job for a superhero!" she declared. She put on a cape
+                (a red towel) and made a sign that said "Captain Cleanup." She picked up the trash and put it in the
+                bin. The next day, her friends saw her and joined in. Soon, the whole park was sparkling clean. Maya
+                realized you don't need superpowers to be a hero—you just need to care for the world around you.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🚦 The Line-Up Lions</h2>
+            <p class="text-lg leading-relaxed">At the ice cream truck, all the kids were pushing and shoving. It was
+                chaos! But Leo the Lion remembered what his grandpa taught him. He stood straight and formed the start
+                of a line. "Let's be Line-Up Lions!" he roared politely. A little penguin waddled behind him, then a
+                giraffe. Soon, everyone was in a neat line. It was faster, fairer, and much friendlier. Being patient
+                and orderly meant everyone got their ice cream without any fuss. It was a sweet victory for good
+                manners!</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🤫 The Library Mouse</h2>
+            <p class="text-lg leading-relaxed">In the town library lived a little mouse named Squeakert. He loved
+                stories, but he knew the library had one important rule: be quiet so everyone can read. When two young
+                puppies started barking and chasing a ball, Squeakert bravely went up to them. He put a tiny finger to
+                his lips and pointed at all the people trying to enjoy their books. The puppies understood. They took
+                their ball outside and came back later to read a book quietly. Squeakert knew that respecting quiet
+                places makes them nice for everyone.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🌳 The Seed Starters</h2>
+            <p class="text-lg leading-relaxed">A barren patch of dirt in the middle of town made everyone feel gloomy. A
+                group of kids, calling themselves the "Seed Starters," decided to do something. They brought seeds from
+                home—sunflowers, marigolds, and daisies. They watered the patch every day. Soon, tiny green shoots
+                appeared, and then beautiful, colorful flowers. Their small act of planting something beautiful turned a
+                sad, forgotten corner into a cheerful garden for the whole neighborhood to enjoy.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">👵 Helping Hands for Mrs. Gable
+            </h2>
+            <p class="text-lg leading-relaxed">Mrs. Gable was a kind, elderly lady who had trouble carrying her heavy
+                groceries. One day, Sam and his sister Lily saw her struggling. "Can we help you?" Lily asked. Together,
+                the three of them easily carried the bags to her house. Mrs. Gable was so thankful, she gave them
+                freshly baked cookies. Sam and Lily learned that being a good neighbor means looking out for others and
+                offering a helping hand when you see someone in need. The cookies were just a bonus!</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🦆 The Duckling Traffic Jam</h2>
+            <p class="text-lg leading-relaxed">Mama Duck was trying to lead her ducklings across a busy street, but cars
+                kept zooming by. It was very dangerous! Just then, a school crossing guard saw them. He blew his whistle
+                and held up his big red "STOP" sign. All the cars stopped. Mama Duck and her ducklings could then cross
+                the street safely. The story shows why traffic rules and people like crossing guards are so
+                important—they keep everyone, even little ducklings, safe from harm.</p>
+        </div>
+    </main>
+
+    <script>
+        const mascot = document.getElementById('mascot');
+        const mascotEyes = document.getElementById('mascot-eyes');
+        document.addEventListener('mousemove', (e) => {
+            const mascotRect = mascot.getBoundingClientRect();
+            const mascotCenterX = mascotRect.left + mascotRect.width / 2;
+            const mascotCenterY = mascotRect.top + mascotRect.height / 2;
+            const angle = Math.atan2(e.clientY - mascotCenterY, e.clientX - mascotCenterX);
+            const moveX = Math.cos(angle) * 5;
+            const moveY = Math.sin(angle) * 3;
+            mascotEyes.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+        window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+    </script>
+</body>
+
+</html>

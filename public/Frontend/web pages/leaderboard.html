@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+    <style>
+        /* Custom styles for the fun theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f3e7ff, #d8b4fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        /* Use the 'Luckiest Guy' font for the title */
+        .font-luckiest {
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        /* Fun animation for the title */
+        .title-animation {
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Animation for leaderboard rows appearing */
+        .leaderboard-row {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: popIn 0.5s ease-out forwards;
+        }
+        
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Fun hover effect for rows */
+        .leaderboard-row:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 10;
+        }
+
+        /* Crown icon for the first place */
+        .crown {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 2.5rem;
+            transform: rotate(-25deg);
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+            animation: sparkle 1.5s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: rotate(-25deg) scale(1); }
+            50% { transform: rotate(-25deg) scale(1.2); }
+        }
+
+    </style>
+</head>
+<body class="bg-purple-100">
+  <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Terra" class="logo">
+                <span class="logo-text">Terra</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#missions" class="nav-link">Missions</a></li>
+                <li><a href="#stories" class="nav-link">Stories</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+                <li><a href="./html/parents.html" class="nav-link">Parents Corner</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="75"></div>
+                    <span class="xp-text">Level 5</span>
+                </div>
+                <div class="avatar-container">
+                    <img src= "C:\Users\ADMIN\Desktop\Smart-Education-App-Frontend-main\Smart-Education-App-Frontend-main\Asset\Images\upf.png" alt="Avatar" class="user-avatar">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="w-full max-w-3xl mx-auto">
+        <!-- The title is now outside and above the main box, preventing overlap -->
+        <h1 class="text-5xl md:text-7xl font-luckiest text-purple-700 text-center mb-6 title-animation" style="text-shadow: 3px 3px 0px #fde047;">
+            Leaderboard
+        </h1>
+
+        <!-- Main container for the leaderboard -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-8">
+            
+            <!-- Header Row -->
+            <div class="hidden md:flex justify-between items-center text-lg font-bold text-purple-800 pb-4 border-b-4 border-purple-200 mb-4">
+                <div class="w-1/6 text-center">Rank</div>
+                <div class="w-3/6">Player</div>
+                <div class="w-2/6 text-right">Points</div>
+            </div>
+
+            <!-- Leaderboard Entries will be dynamically added here -->
+            <div id="leaderboard-list" class="space-y-4">
+                <!-- JS will populate this section -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Terra Learning</h4>
+                    <p>Making learning magical for every child</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Parents</h4>
+                    <ul>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#safety">Safety & Privacy</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learning Worlds</h4>
+                    <ul>
+                        <li><a href="science-world.html">Science World</a></li>
+                        <li><a href="math-galaxy.html">Math Galaxy</a></li>
+                        <li><a href="history-land.html">History Land</a></li>
+                        <li><a href="#lifeskills">Life Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample data for the leaderboard. You can replace this with your actual data.
+        const players = [
+            { name: 'CosmicComet', points: 4850, avatar: '🚀' },
+            { name: 'StarGazer', points: 4520, avatar: '⭐' },
+            { name: 'GalaxyGirl', points: 4210, avatar: '👩‍🚀' },
+            { name: 'PlanetHopper', points: 3980, avatar: '🪐' },
+            { name: 'RocketRider', points: 3500, avatar: '🧑‍🚀' },
+            { name: 'AlienFriend', points: 3150, avatar: '👽' },
+            { name: 'MoonWalker', points: 2800, avatar: '🌕' },
+        ];
+
+        const leaderboardList = document.getElementById('leaderboard-list');
+
+        players.forEach((player, index) => {
+            // Create a new div for each player row
+            const row = document.createElement('div');
+            
+            // Add animation delay for a staggered effect
+            row.style.animationDelay = `${index * 0.1}s`;
+
+            // Style the row with TailwindCSS classes
+            const rank = index + 1;
+            const isTopThree = rank <= 3;
+            let bgColor = 'bg-white';
+            let textColor = 'text-gray-700';
+            
+            if (rank === 1) {
+                bgColor = 'bg-yellow-300';
+                textColor = 'text-yellow-900';
+            } else if (rank === 2) {
+                bgColor = 'bg-gray-300';
+                textColor = 'text-gray-900';
+            } else if (rank === 3) {
+                bgColor = 'bg-orange-300';
+                textColor = 'text-orange-900';
+            }
+
+            row.className = `leaderboard-row relative flex items-center p-4 rounded-2xl shadow-lg transition-transform duration-300 ${bgColor} ${textColor}`;
+            
+            // Inner HTML for the row
+            row.innerHTML = `
+                <!-- Rank Box -->
+                <div class="w-1/6 flex items-center justify-center">
+                    <span class="text-2xl md:text-3xl font-bold">${rank}</span>
+                </div>
+                
+                <!-- Player Info -->
+                <div class="w-3/6 flex items-center space-x-4">
+                    <div class="text-4xl bg-white/50 rounded-full w-12 h-12 flex justify-center items-center">${player.avatar}</div>
+                    <span class="text-lg md:text-xl font-semibold truncate">${player.name}</span>
+                </div>
+                
+                <!-- Points -->
+                <div class="w-2/6 text-right">
+                    <span class="text-xl md:text-2xl font-bold text-purple-600">${player.points.toLocaleString()}</span>
+                    <span class="text-sm font-semibold"> pts</span>
+                </div>
+                
+                <!-- Add a crown for the first place winner -->
+                ${rank === 1 ? '<div class="crown">👑</div>' : ''}
+            `;
+
+            leaderboardList.appendChild(row);
+        });
+
+    </script>
+</body>
+</html>
+

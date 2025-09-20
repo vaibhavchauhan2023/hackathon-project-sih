@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pappy</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Pappy" class="logo">
+                <span class="logo-text">Pappy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#missions" class="nav-link">Missions</a></li>
+                <li><a href="interactive_story.html" class="nav-link">Stories</a></li>
+                <!-- <li><a href="#games" class="nav-link">Games</a></li> -->
+                <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+                <li><a href="parents.html" class="nav-link">Parents Corner</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="75"></div>
+                    <span class="xp-text">Level 5</span>
+                </div>
+                <div class="avatar-container">
+                    <img src= "..\Asset\Images\upf.png" alt="Avatar" class="user-avatar">
+                </div>
+                <button class="logout-btn" style="background: #F09738; color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; font-size: 12px; margin-left: 10px;">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Learn, <span class="highlight">Play</span> and<span class="highlight"> Grow</span> every day!</h1>
+                <p class="hero-subtitle">Join our magical learning adventure where curiosity meets creativity!</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" id="startQuest">
+                        Start Learning Quest
+                    </button>
+                    <button class="btn btn-secondary btn-large" id="playExplore">
+                        Play & Explore
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <img src="..\Asset\Images\parrot-hero.png" alt="Pappy Character" class="hero-character">
+                    <div class="floating-icons">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+    </section>
+
+    <!-- Mascot Guide -->
+    <div class="mascot-guide" id="mascot">
+        <div class="mascot-bubble">
+            <p class="mascot-text">Hi Pappies! Ready to start your adventure today? 🌟</p>
+        </div>
+        <div class="mascot-character">
+            <img src="..\Asset\Images\upf.png" alt="Terra Mascot" class="mascot-img">
+        </div>
+    </div>
+
+    <!-- Learning Worlds Section -->
+    <section class="learning-worlds" id="missions">
+        <div class="container">
+            <h2 class="section-title">Choose Your Adventure World!</h2>
+            <div class="worlds-grid">
+
+                <div class="world-card science-world " data-world="science">
+                    <div class="world-icon">
+                        <img src="..\Asset\Gif\science world.gif" height="150px"></div>
+
+                    <h3>Science World</h3>
+                    <p>Explore space, experiments, and the environment!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span>60% Complete</span>
+                    </div>
+                    <a href="science-world.html"><button class="btn btn-world">Enter World</button></a>
+                </div>
+
+                <div class="world-card math-world" data-world="math">
+                    <div class="world-icon"><img src="..\Asset\Gif\maths world.gif" height="150px"></div>
+                    <h3>Math Galaxy</h3>
+                    <p>Solve puzzles and go on treasure hunts!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span>40% Complete</span>
+                    </div>
+                    <a href="math-galaxy.html"><button class="btn btn-world">Enter World</button></a>
+                </div>
+
+                <div class="world-card history-world" data-world="history">
+                    <div class="world-icon"><img src="..\Asset\Gif\history world.gif" height="150px"></div>
+                    <h3>History Land</h3>
+                    <p>Meet heroes and explore ancient civilizations!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <span>25% Complete</span>
+                    </div>
+                    <a href="history-land.html"><button class="btn btn-world">Enter World</button></a>
+                </div>
+
+                <div class="world-card life-skills-world" data-world="lifeskills">
+                    <div class="world-icon"><img src="..\Asset\Gif\life skills world.gif" height="150px"></div>
+                    <h3>Life Skills Village</h3>
+                    <p>Learn kindness, hygiene, and safety!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <span>80% Complete</span>
+                    </div>
+                    <button class="btn btn-world">Enter World</button>
+                </div>
+
+                <div class="world-card ai-world" data-world="ai">
+                    <div class="world-icon"><img src="..\Asset\Gif\ai future world.gif" height="150px"></div>
+                    <h3>AI & Future City</h3>
+                    <p>Discover AI and digital citizenship!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%"></div>
+                        </div>
+                        <span>10% Complete</span>
+                    </div>
+                    <button class="btn btn-world    ">Enter World    </button>
+                </div>
+
+                <div class="world-card creative-world" data-world="creative">
+                    <div class="world-icon"><img src="..\Asset\Gif\space world.gif" height="150px"></div>
+                    <h3>Creative Corner</h3>
+                    <p>Art, music, and storytelling adventures!</p>
+                    <div class="world-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <span>90% Complete</span>
+                    </div>
+                    <button class="btn btn-world">Enter World</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Challenge -->
+    <section class="daily-challenge">
+        <div class="container">
+            <div class="challenge-card">
+                <h3>🌟 Today's Challenge</h3>
+                <p>Help Terra clean up the virtual park and learn about recycling!</p>
+                <div class="challenge-reward">
+                    <span class="reward-text">Reward: 50 XP + Eco Warrior Badge</span>
+                </div>
+                <button class="btn btn-challenge">Accept Challenge</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Your Amazing Achievements! 🏆</h2>
+            <div class="badges-grid">
+                <div class="badge earned">
+                    <div class="badge-icon">🌟</div>
+                    <span>First Steps</span>
+                </div>
+                <div class="badge earned">
+                    <div class="badge-icon">💡</div>
+                    <span>Bright Mind</span>
+                </div>
+                <div class="badge earned">
+                    <div class="badge-icon">🌱</div>
+                    <span>Eco Hero</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🚀</div>
+                    <span>Space Explorer</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🎨</div>
+                    <span>Creative Genius</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">👑</div>
+                    <span>Learning King</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="container">
+            <div class="fact-card">
+                <h3>🧠 Did You Know?</h3>
+                <p class="fact-text">Your brain has about 86 billion neurons - that's more than the number of stars in our galaxy!</p>
+                <button class="btn btn-small" id="nextFact">Next Fact</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Terra Learning</h4>
+                    <p>Making learning magical for every child</p>
+                </div>
+                <div class="footer-section">
+                    <h4>For Parents</h4>
+                    <ul>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#safety">Safety & Privacy</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Learning Worlds</h4>
+                    <ul>
+                        <li><a href="science-world.html">Science World</a></li>
+                        <li><a href="math-galaxy.html">Math Galaxy</a></li>
+                        <li><a href="history-land.html">History Land</a></li>
+                        <li><a href="#lifeskills">Life Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button for Help -->
+    <div class="help-button" id="helpBtn">
+        <span>❓</span>
+    </div>
+
+    <script src="../JS/auth.js"></script>
+    <script src="../JS/script.js"></script>
+    <script>
+    // Get all the images that should have the hover effect
+    const hoverGifs = document.querySelectorAll('.hover-gif');
+
+    // Loop through each image
+    hoverGifs.forEach(gif => {
+        // Get the paths from the data attributes
+        const staticSrc = gif.dataset.static;
+        const animatedSrc = gif.dataset.animated;
+
+        // Event listener for when the mouse enters the image area
+        gif.addEventListener('mouseover', () => {
+            gif.src = animatedSrc;
+        });
+
+        // Event listener for when the mouse leaves the image area
+        gif.addEventListener('mouseout', () => {
+            gif.src = staticSrc;
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

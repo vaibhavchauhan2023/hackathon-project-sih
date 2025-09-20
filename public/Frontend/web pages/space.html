@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Adventure Quest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --space-bg: #0c0a1a;
+            --text-light: #f0f8ff;
+            --planet-sun: #fdd835;
+            --planet-mercury: #a1887f;
+            --planet-venus: #ffcc80;
+            --planet-earth: #4fc3f7;
+            --planet-mars: #ff8a65;
+            --planet-jupiter: #d7ccc8;
+            --planet-saturn: #fff59d;
+            --planet-uranus: #80deea;
+            --planet-neptune: #5c6bc0;
+            --correct-glow: #00ffc3;
+            --incorrect-glow: #ff5252;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--space-bg);
+            color: var(--text-light);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #game-world {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+
+        .celestial-body {
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .celestial-body:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .celestial-body.current::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 3px dashed var(--text-light);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .planet-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: white;
+            text-shadow: 0 0 5px black;
+        }
+
+        #sun {
+            background: var(--planet-sun);
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 50px var(--planet-sun);
+        }
+
+        #mercury {
+            background: var(--planet-mercury);
+            width: 20px;
+            height: 20px;
+        }
+
+        #venus {
+            background: var(--planet-venus);
+            width: 35px;
+            height: 35px;
+        }
+
+        #earth {
+            background: var(--planet-earth);
+            width: 40px;
+            height: 40px;
+        }
+
+        #mars {
+            background: var(--planet-mars);
+            width: 30px;
+            height: 30px;
+        }
+
+        #jupiter {
+            background: var(--planet-jupiter);
+            width: 80px;
+            height: 80px;
+        }
+
+        #saturn {
+            background: var(--planet-saturn);
+            width: 70px;
+            height: 70px;
+        }
+
+        #saturn::after {
+            /* Rings */
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            border: 5px solid rgba(255, 245, 157, 0.7);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) rotateX(70deg);
+        }
+
+        #uranus {
+            background: var(--planet-uranus);
+            width: 50px;
+            height: 50px;
+        }
+
+        #neptune {
+            background: var(--planet-neptune);
+            width: 45px;
+            height: 45px;
+        }
+
+        #spaceship {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 2.5rem;
+            transform: translate(-50%, -50%) rotate(90deg);
+            transition: top 2s ease-in-out, left 2s ease-in-out, transform 2s ease-in-out;
+            z-index: 10;
+        }
+
+        /* Quiz Modal */
+        #quiz-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
+
+        #quiz-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .quiz-content {
+            background: rgba(30, 28, 58, 0.9);
+            border: 2px solid var(--planet-neptune);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(92, 107, 192, 0.5);
+            transform: scale(0.8);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        #quiz-modal.show .quiz-content {
+            transform: scale(1);
+        }
+
+        #question-text {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        #options-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .option-btn {
+            padding: 15px;
+            font-size: 1.1rem;
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--planet-uranus);
+            border: none;
+            border-radius: 10px;
+            color: var(--space-bg);
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .option-btn:hover {
+            transform: scale(1.05);
+            background-color: #a0f0fa;
+        }
+
+        #feedback-text {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            height: 20px;
+        }
+
+        /* Start & End Screens */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 200;
+        }
+
+        .overlay h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--planet-sun);
+            text-shadow: 0 0 10px var(--planet-sun);
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+            max-width: 500px;
+        }
+
+        .start-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            background-image: linear-gradient(45deg, #63d471, #28b485);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #end-screen {
+            display: none;
+            /* Hidden by default */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="start-screen" class="overlay">
+        <h1>Solar System Adventure!</h1>
+        <p>Welcome, Space Explorer! Your mission is to travel from the Sun to Neptune by answering one question at each
+            stop. Are you ready for launch?</p>
+        <button id="start-game-btn" class="start-btn">Start Mission</button>
+    </div>
+
+    <div id="end-screen" class="overlay">
+        <h1>Mission Complete!</h1>
+        <p>Congratulations! You've successfully navigated the solar system. You're a true cosmic genius!</p>
+        <button id="play-again-btn" class="start-btn">Play Again</button>
+    </div>
+
+    <div id="game-world">
+        <!-- Celestial bodies will be added here by JS -->
+        <div id="spaceship">🚀</div>
+    </div>
+
+    <div id="quiz-modal">
+        <div class="quiz-content">
+            <h2 id="question-text">Question goes here...</h2>
+            <div id="options-container">
+                <!-- Buttons will be added here by JS -->
+            </div>
+            <p id="feedback-text"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gameWorld = document.getElementById('game-world');
+            const spaceship = document.getElementById('spaceship');
+            const quizModal = document.getElementById('quiz-modal');
+            const questionText = document.getElementById('question-text');
+            const optionsContainer = document.getElementById('options-container');
+            const feedbackText = document.getElementById('feedback-text');
+            const startScreen = document.getElementById('start-screen');
+            const endScreen = document.getElementById('end-screen');
+            const startGameBtn = document.getElementById('start-game-btn');
+            const playAgainBtn = document.getElementById('play-again-btn');
+
+            const solarSystemData = [
+                { id: 'sun', name: 'Sun', pos: { top: '50%', left: '10%' }, question: 'What is the Sun?', options: ['A Star', 'A Planet', 'A Moon', 'A Comet'], answer: 'A Star' },
+                { id: 'mercury', name: 'Mercury', pos: { top: '45%', left: '20%' }, question: 'Which planet is closest to the Sun?', options: ['Mercury', 'Earth', 'Mars', 'Venus'], answer: 'Mercury' },
+                { id: 'venus', name: 'Venus', pos: { top: '65%', left: '28%' }, question: 'Which planet is known as the "Morning Star"?', options: ['Venus', 'Jupiter', 'Saturn', 'Mars'], answer: 'Venus' },
+                { id: 'earth', name: 'Earth', pos: { top: '30%', left: '38%' }, question: 'What is the name of the planet we live on?', options: ['Earth', 'Mars', 'Terra', 'Gaia'], answer: 'Earth' },
+                { id: 'mars', name: 'Mars', pos: { top: '75%', left: '48%' }, question: 'Which planet is called the "Red Planet"?', options: ['Mars', 'Jupiter', 'Neptune', 'Saturn'], answer: 'Mars' },
+                { id: 'jupiter', name: 'Jupiter', pos: { top: '40%', left: '60%' }, question: 'What is the BIGGEST planet in our solar system?', options: ['Jupiter', 'Saturn', 'Earth', 'The Sun'], answer: 'Jupiter' },
+                { id: 'saturn', name: 'Saturn', pos: { top: '70%', left: '75%' }, question: 'Which planet is famous for its beautiful rings?', options: ['Saturn', 'Uranus', 'Mars', 'Earth'], answer: 'Saturn' },
+                { id: 'uranus', name: 'Uranus', pos: { top: '25%', left: '85%' }, question: 'This chilly planet is unique because it spins on its side!', options: ['Uranus', 'Neptune', 'Venus', 'Pluto'], answer: 'Uranus' },
+                { id: 'neptune', name: 'Neptune', pos: { top: '60%', left: '92%' }, question: 'Which windy planet is the farthest from the Sun?', options: ['Neptune', 'Jupiter', 'Mercury', 'Mars'], answer: 'Neptune' },
+            ];
+
+            let currentPlanetIndex = 0;
+
+            function initGame() {
+                // Reset game state
+                currentPlanetIndex = 0;
+                gameWorld.innerHTML = ''; // Clear old planets
+                gameWorld.appendChild(spaceship); // Re-add spaceship
+
+                // Create celestial bodies
+                solarSystemData.forEach(body => {
+                    const el = document.createElement('div');
+                    el.id = body.id;
+                    el.classList.add('celestial-body');
+                    el.style.top = body.pos.top;
+                    el.style.left = body.pos.left;
+
+                    const label = document.createElement('span');
+                    label.classList.add('planet-label');
+                    label.textContent = body.name;
+                    el.appendChild(label);
+
+                    gameWorld.appendChild(el);
+                });
+
+                // Hide screens and modals
+                startScreen.style.display = 'none';
+                endScreen.style.display = 'none';
+                quizModal.classList.remove('show');
+
+                // Start the journey
+                moveToPlanet(0);
+            }
+
+            function moveToPlanet(index) {
+                // Remove 'current' class from all
+                document.querySelectorAll('.celestial-body').forEach(p => p.classList.remove('current'));
+
+                const targetPlanet = solarSystemData[index];
+                if (!targetPlanet) {
+                    endGame();
+                    return;
+                }
+                const targetElement = document.getElementById(targetPlanet.id);
+
+                // Animate spaceship
+                spaceship.style.top = targetPlanet.pos.top;
+                spaceship.style.left = targetPlanet.pos.left;
+
+                // After travel time, highlight planet and show question
+                setTimeout(() => {
+                    targetElement.classList.add('current');
+                    setTimeout(() => showQuestion(targetPlanet), 500);
+                }, 2000); // 2-second travel time
+            }
+
+            function showQuestion(planet) {
+                questionText.textContent = planet.question;
+                optionsContainer.innerHTML = '';
+                feedbackText.textContent = '';
+
+                planet.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.classList.add('option-btn');
+                    button.textContent = option;
+                    button.onclick = () => checkAnswer(option, planet.answer);
+                    optionsContainer.appendChild(button);
+                });
+
+                quizModal.classList.add('show');
+            }
+
+            function checkAnswer(selected, correct) {
+                if (selected === correct) {
+                    feedbackText.textContent = 'Correct! Prepare for next jump!';
+                    feedbackText.style.color = var(--correct - glow);
+
+                    // Disable buttons to prevent multiple clicks
+                    document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
+
+                    setTimeout(() => {
+                        quizModal.classList.remove('show');
+                        currentPlanetIndex++;
+                        moveToPlanet(currentPlanetIndex);
+                    }, 1500);
+                } else {
+                    feedbackText.textContent = 'Not quite! Try again, explorer!';
+                    feedbackText.style.color = var(--incorrect - glow);
+                }
+            }
+
+            function endGame() {
+                endScreen.style.display = 'flex';
+            }
+
+            startGameBtn.addEventListener('click', initGame);
+            playAgainBtn.addEventListener('click', initGame);
+
+        });
+    </script>
+</body>
+
+</html>

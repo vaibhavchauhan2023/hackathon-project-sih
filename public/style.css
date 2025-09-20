@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background: #5a67d8;
+}
+
+.toggle-text {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.toggle-text a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+#message {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#userInfo {
+    text-align: center;
+}
+
+#userInfo h3 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+#logoutBtn {
+    background: #dc3545;
+    margin-top: 1rem;
+}
+
+#logoutBtn:hover {
+    background: #c82333;
+}

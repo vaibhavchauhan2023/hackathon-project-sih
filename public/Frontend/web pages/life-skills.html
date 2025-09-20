@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Skills Village - Terra Learning</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/life-skills.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="village-body">
+    <!-- Header -->
+    <header class="header village-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Terra" class="logo">
+                    <span class="logo-text">Terra</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"> Home</a></li>
+                <li><a href="#village-map" class="nav-link active">Village Map</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+                <li><a href="#achievements" class="nav-link">Progress</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="35"></div>
+                    <span class="xp-text">Level 6</span>
+                </div>
+                <div class="village-coins">
+                    <span class="coin-icon">🪙</span>
+                    <span class="coin-count">120</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="village-hero">
+        <div class="hero-bg">
+            <div class="floating-elements">
+                <div class="village-element">🏠</div>
+                <div class="village-element">🌳</div>
+                <div class="village-element">👨‍👩‍👧‍👦</div>
+                <div class="village-element">🛒</div>
+                <div class="village-element">🚌</div>
+                <div class="village-element">💝</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="village-title">Welcome to Life Skills Village! 🏡</h1>
+                <p class="village-subtitle">Learn essential life skills, build friendships, and become a responsible member of our community!</p>
+                
+                <div class="village-progress-card">
+                    <h3>Your Village Journey</h3>
+                    <div class="progress-info">
+                        <div class="progress-circle">
+                            <svg class="progress-ring" width="80" height="80">
+                                <circle class="progress-ring-circle" cx="40" cy="40" r="36" stroke="#4CAF50" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="135"></circle>
+                            </svg>
+                            <div class="progress-text">40%</div>
+                        </div>
+                        <div class="progress-details">
+                            <p><strong>8</strong> skills learned</p>
+                            <p><strong>5</strong> friends made</p>
+                            <p><strong>3</strong> good deeds done</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Map Section -->
+    <section class="village-map-section" id="village-map">
+        <div class="container">
+            <h2 class="section-title">Explore Our Village! 🗺️</h2>
+            
+            <div class="village-map">
+                <div class="village-building home completed" data-building="home">
+                    <div class="building-icon">🏠</div>
+                    <div class="building-name">Home Sweet Home</div>
+                    <div class="building-status">✅ Completed</div>
+                </div>
+
+                <div class="village-building school current" data-building="school">
+                    <div class="building-icon">🏫</div>
+                    <div class="building-name">Learning Center</div>
+                    <div class="building-status">📖 In Progress</div>
+                </div>
+
+                <div class="village-building market available" data-building="market">
+                    <div class="building-icon">🛒</div>
+                    <div class="building-name">Community Market</div>
+                    <div class="building-status">🔓 Available</div>
+                </div>
+
+                <div class="village-building hospital available" data-building="hospital">
+                    <div class="building-icon">🏥</div>
+                    <div class="building-name">Health Center</div>
+                    <div class="building-status">🔓 Available</div>
+                </div>
+
+                <div class="village-building bank locked" data-building="bank">
+                    <div class="building-icon">🏦</div>
+                    <div class="building-name">Village Bank</div>
+                    <div class="building-status">🔒 Level 7</div>
+                </div>
+
+                <div class="village-building park available" data-building="park">
+                    <div class="building-icon">🌳</div>
+                    <div class="building-name">Friendship Park</div>
+                    <div class="building-status">🔓 Available</div>
+                </div>
+
+                <div class="village-building police locked" data-building="police">
+                    <div class="building-icon">🚔</div>
+                    <div class="building-name">Safety Station</div>
+                    <div class="building-status">🔒 Level 8</div>
+                </div>
+
+                <div class="village-building community-hall available" data-building="community-hall">
+                    <div class="building-icon">🏛️</div>
+                    <div class="building-name">Community Hall</div>
+                    <div class="building-status">🔓 Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Learning Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Essential Life Skills! 💪</h2>
+            
+            <div class="skills-categories">
+                <div class="skill-category personal-care">
+                    <div class="category-header">
+                        <div class="category-icon">🧼</div>
+                        <h3>Personal Care</h3>
+                        <div class="category-progress">6/8</div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item completed">
+                            <div class="skill-icon">🪥</div>
+                            <div class="skill-name">Brushing Teeth</div>
+                            <div class="skill-status">✅ Mastered</div>
+                        </div>
+                        <div class="skill-item completed">
+                            <div class="skill-icon">🚿</div>
+                            <div class="skill-name">Taking a Bath</div>
+                            <div class="skill-status">✅ Mastered</div>
+                        </div>
+                        <div class="skill-item current">
+                            <div class="skill-icon">👕</div>
+                            <div class="skill-name">Dressing Up</div>
+                            <div class="skill-status">⏳ Learning</div>
+                        </div>
+                        <div class="skill-item available">
+                            <div class="skill-icon">💅</div>
+                            <div class="skill-name">Nail Care</div>
+                            <div class="skill-status">📖 Ready</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category home-skills">
+                    <div class="category-header">
+                        <div class="category-icon">🏠</div>
+                        <h3>Home Skills</h3>
+                        <div class="category-progress">4/10</div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item completed">
+                            <div class="skill-icon">🧹</div>
+                            <div class="skill-name">Cleaning Room</div>
+                            <div class="skill-status">✅ Mastered</div>
+                        </div>
+                        <div class="skill-item current">
+                            <div class="skill-icon">🍳</div>
+                            <div class="skill-name">Simple Cooking</div>
+                            <div class="skill-status">⏳ Learning</div>
+                        </div>
+                        <div class="skill-item available">
+                            <div class="skill-icon">👕</div>
+                            <div class="skill-name">Folding Clothes</div>
+                            <div class="skill-status">📖 Ready</div>
+                        </div>
+                        <div class="skill-item locked">
+                            <div class="skill-icon">🔧</div>
+                            <div class="skill-name">Basic Repairs</div>
+                            <div class="skill-status">🔒 Level 7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category social-skills">
+                    <div class="category-header">
+                        <div class="category-icon">🤝</div>
+                        <h3>Social Skills</h3>
+                        <div class="category-progress">3/8</div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item completed">
+                            <div class="skill-icon">👋</div>
+                            <div class="skill-name">Good Manners</div>
+                            <div class="skill-status">✅ Mastered</div>
+                        </div>
+                        <div class="skill-item current">
+                            <div class="skill-icon">💬</div>
+                            <div class="skill-name">Communication</div>
+                            <div class="skill-status">⏳ Learning</div>
+                        </div>
+                        <div class="skill-item available">
+                            <div class="skill-icon">🤗</div>
+                            <div class="skill-name">Making Friends</div>
+                            <div class="skill-status">📖 Ready</div>
+                        </div>
+                        <div class="skill-item available">
+                            <div class="skill-icon">😊</div>
+                            <div class="skill-name">Helping Others</div>
+                            <div class="skill-status">📖 Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Activities Section -->
+    <section class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Fun Learning Activities! 🎯</h2>
+            
+            <div class="activities-grid">
+                <div class="activity-card cooking">
+                    <div class="activity-icon">👩‍🍳</div>
+                    <h3>Cooking Challenge</h3>
+                    <p>Learn to make simple, healthy snacks and meals with step-by-step guidance!</p>
+                    <div class="activity-info">
+                        <span class="difficulty beginner">Beginner</span>
+                        <span class="time">⏱️ 20 min</span>
+                    </div>
+                    <button class="btn btn-activity">Start Cooking</button>
+                </div>
+
+                <div class="activity-card budgeting">
+                    <div class="activity-icon">💰</div>
+                    <h3>Smart Shopping</h3>
+                    <p>Practice budgeting and making smart choices while shopping for your family!</p>
+                    <div class="activity-info">
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <span class="time">⏱️ 25 min</span>
+                    </div>
+                    <button class="btn btn-activity">Go Shopping</button>
+                </div>
+
+                <div class="activity-card communication">
+                    <div class="activity-icon">📞</div>
+                    <h3>Communication Practice</h3>
+                    <p>Learn how to talk to different people in various situations politely and clearly!</p>
+                    <div class="activity-info">
+                        <span class="difficulty beginner">Beginner</span>
+                        <span class="time">⏱️ 15 min</span>
+                    </div>
+                    <button class="btn btn-activity">Practice Talking</button>
+                </div>
+
+                <div class="activity-card emergency">
+                    <div class="activity-icon">🚨</div>
+                    <h3>Emergency Preparedness</h3>
+                    <p>Learn what to do in emergencies and how to stay safe in different situations!</p>
+                    <div class="activity-info">
+                        <span class="difficulty advanced">Advanced</span>
+                        <span class="time">⏱️ 30 min</span>
+                    </div>
+                    <button class="btn btn-activity locked">🔒 Level 7</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="container">
+            <h2 class="section-title">Our Village Community! 👨‍👩‍👧‍👦</h2>
+            
+            <div class="community-features">
+                <div class="feature-card help-board">
+                    <div class="feature-header">
+                        <div class="feature-icon">📋</div>
+                        <h3>Community Help Board</h3>
+                    </div>
+                    <div class="help-requests">
+                        <div class="help-item">
+                            <div class="help-avatar">👵</div>
+                            <div class="help-content">
+                                <h4>Mrs. Johnson needs help</h4>
+                                <p>Can someone help me carry groceries from the market?</p>
+                                <button class="btn btn-help">I Can Help! 🙋‍♂️</button>
+                            </div>
+                        </div>
+                        <div class="help-item">
+                            <div class="help-avatar">👨‍🦳</div>
+                            <div class="help-content">
+                                <h4>Mr. Smith's garden</h4>
+                                <p>Looking for young helpers to water plants in the community garden!</p>
+                                <button class="btn btn-help">Count Me In! 🌱</button>
+                            </div>
+                        </div>
+                        <div class="help-item">
+                            <div class="help-avatar">🐕</div>
+                            <div class="help-content">
+                                <h4>Pet Care Needed</h4>
+                                <p>Can someone help walk the community dogs this weekend?</p>
+                                <button class="btn btn-help">I Love Dogs! 🐕</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card good-deeds">
+                    <div class="feature-header">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Good Deeds Tracker</h3>
+                    </div>
+                    <div class="deeds-progress">
+                        <div class="deed-item completed">
+                            <span class="deed-icon">✅</span>
+                            <span class="deed-text">Helped carry groceries</span>
+                            <span class="deed-reward">+20 coins</span>
+                        </div>
+                        <div class="deed-item completed">
+                            <span class="deed-icon">✅</span>
+                            <span class="deed-text">Cleaned park bench</span>
+                            <span class="deed-reward">+15 coins</span>
+                        </div>
+                        <div class="deed-item in-progress">
+                            <span class="deed-icon">⏳</span>
+                            <span class="deed-text">Reading to younger kids</span>
+                            <span class="deed-reward">+25 coins</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">Add Good Deed</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Skills Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Test Your Life Skills! 🧠</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-card active">
+                    <div class="quiz-header">
+                        <h3>Daily Routine Quiz</h3>
+                        <div class="quiz-progress">
+                            <span>Question 1 of 5</span>
+                            <div class="quiz-progress-bar">
+                                <div class="quiz-progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-content">
+                        <div class="question-area">
+                            <h4>What's the best time to brush your teeth?</h4>
+                            <div class="quiz-options">
+                                <button class="quiz-option" data-answer="wrong">Only when I remember</button>
+                                <button class="quiz-option" data-answer="correct">After meals and before bed</button>
+                                <button class="quiz-option" data-answer="wrong">Once a week</button>
+                                <button class="quiz-option" data-answer="wrong">Only when my teeth hurt</button>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-mascot">
+                            <div class="mascot-character">
+                                <span class="mascot-icon">🦷</span>
+                            </div>
+                            <div class="mascot-bubble">
+                                <p>Think about keeping your teeth healthy and clean!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Your Village Achievements! 🏆</h2>
+            
+            <div class="achievements-container">
+                <div class="achievement-grid">
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🏠</div>
+                        <h4>Home Helper</h4>
+                        <p>Completed all basic home skills</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🤝</div>
+                        <h4>Good Friend</h4>
+                        <p>Made 5 friends in the village</p>
+                        <div class="badge-date">Earned 3 days ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">👩‍🍳</div>
+                        <h4>Little Chef</h4>
+                        <p>Master cooking skills</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span>3/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">💰</div>
+                        <h4>Smart Spender</h4>
+                        <p>Learn money management</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span>2/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🚨</div>
+                        <h4>Safety Expert</h4>
+                        <p>Complete emergency preparedness</p>
+                        <div class="badge-requirement">Unlock Level 7</div>
+                    </div>
+                    
+                    <div class="achievement-badge mystery">
+                        <div class="badge-icon">❓</div>
+                        <h4>Village Hero</h4>
+                        <p>Something special awaits!</p>
+                        <div class="badge-requirement">???</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Village Mascot -->
+    <div class="village-mascot" id="villageMascot">
+        <div class="mascot-bubble">
+            <p class="mascot-text">Great job learning to cook! Remember, practice makes perfect! 👩‍🍳</p>
+        </div>
+        <div class="mascot-character village-character">
+            <span class="mascot-icon">🏡</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer village-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Life Skills Village</h4>
+                    <p>Learn essential skills for life and build a strong community together!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Back to Terra</a></li>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#help">Village Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Other Worlds</h4>
+                    <ul>
+                        <li><a href="science-world.html">Science World</a></li>
+                        <li><a href="math-galaxy.html">Math Galaxy</a></li>
+                        <li><a href="history-land.html">History Land</a></li>
+                        <li><a href="creative-corner.html">Creative Corner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/life-skills.js"></script>
+</body>
+</html>

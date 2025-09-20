@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wacky Facts!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Fredoka One', cursive; background-color: #361169; color: #ffffff; }
+        :root { --primary-color: #F09738; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .mascot-float { animation: float 4s ease-in-out infinite; }
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #4A1E8C; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ffb154; }
+    </style>
+</head>
+<body class="min-h-screen p-4 transition-opacity duration-500 ease-in-out" style="opacity: 0;">
+
+    <header class="sticky top-4 z-50 w-full max-w-5xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div id="mascot" class="mascot-float"><svg width="80" height="90" viewBox="0 0 150 180" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 76.5C133.5 61.5 125 47.5 119 43C113 38.5 106 43 106 43L111 68L128.5 76.5Z" fill="#9B59B6"/><path d="M21.5 76.5C16.5 61.5 25 47.5 31 43C37 38.5 44 43 44 43L39 68L21.5 76.5Z" fill="#9B59B6"/><path d="M117.433 138.995C113.833 144.328 107.5 147.5 102.5 147.5C92.5 147.5 86.5 137.5 82 135.5C77.5 133.5 72.5 133.5 68 135.5C63.5 137.5 57.5 147.5 47.5 147.5C42.5 147.5 36.1667 144.328 32.5667 138.995C24.4667 127.095 24.1667 101.5 24.1667 101.5C36.6667 96.5 75 95.5 125.833 101.5C125.833 101.5 125.533 127.095 117.433 138.995Z" fill="#8E44AD"/><ellipse cx="75" cy="100" rx="60" ry="65" fill="#8E44AD"/><ellipse cx="75" cy="115" rx="45" ry="40" fill="#9B59B6"/><path d="M75 35C72.3333 30.3333 71.5 19.5 75 15C78.5 19.5 77.6667 30.3333 75 35Z" fill="#8E44AD"/><path d="M90 30C86.5 24.5 82.5 15 88 10C93.5 15 93.5 24.5 90 30Z" fill="#8E44AD"/><path d="M60 30C63.5 24.5 67.5 15 62 10C56.5 15 56.5 24.5 60 30Z" fill="#8E44AD"/><circle cx="58" cy="70" r="18" fill="white"/><circle cx="92" cy="70" r="18" fill="white"/><path d="M75 82C81.5 85 85 82.8333 87 80C82.5 79.5 67.5 79.5 63 80C65 82.8333 68.5 85 75 82Z" fill="#F09738"/><path d="M75 75C85 75 87 80 87 80C82.5 79.5 67.5 79.5 63 80C63 80 65 75 75 75Z" fill="#F39C12"/><g id="mascot-eyes"><circle cx="58" cy="70" r="9" fill="#2C3E50"/><circle cx="92" cy="70" r="9" fill="#2C3E50"/></g><path d="M57 159C57 163.418 53.4183 167 49 167C44.5817 167 41 163.418 41 159C41 156.5 44 152 49 152C54 152 57 156.5 57 159Z" fill="#F09738"/><path d="M109 159C109 163.418 105.418 167 101 167C96.5817 167 93 163.418 93 159C93 156.5 96 152 101 152C106 152 109 156.5 109 159Z" fill="#F09738"/></svg></div>
+            <h1 class="text-2xl md:text-3xl font-bold" style="color: var(--primary-color);">Pip's Wacky Facts</h1>
+        </div>
+        <a href="interactive_story.html" class="bg-[#F09738] text-white font-bold py-2 px-6 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105">Back</a>
+    </header>
+
+    <main class="w-full max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🤪 Weird & Wacky Facts!</h2>
+            <p class="text-lg leading-relaxed">Hey, it's me, Pip! Did you know a group of flamingos is called a "flamboyance"? Or that an octopus has three hearts? And get this—a snail can sleep for three years! Wow! The world is full of strange and amazing things. Keep exploring and you'll find wacky facts everywhere you look. Now that's what I call brain food, not brain rot!</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🤯 More Mind-Boggling Tidbits!</h2>
+            <p class="text-lg leading-relaxed">You want more? I've got more! Did you know that you can't hum while holding your nose? Go on, try it! Also, a crocodile can't stick its tongue out. And here's a super-duper one: it rains diamonds on Jupiter and Saturn! Imagine that! The universe is a playground of amazing secrets. Isn't learning the coolest adventure?</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🦋 Amazing Animal Facts!</h2>
+            <p class="text-lg leading-relaxed">Animals are awesome! A chameleon's tongue is twice as long as its body. Whoa! And butterflies taste with their feet. Imagine tasting your food by walking on it! A shrimp's heart is in its head, which is a pretty wild place to keep it. The world of animals is full of funny and freaky surprises!</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">💪 Your Super Body!</h2>
+            <p class="text-lg leading-relaxed">Your own body is a wonderland! Your brain generates more electricity in one day than all the cell phones in the world combined. ZAP! When you sneeze, the air comes out at over 100 miles per hour. That's faster than a cheetah! And your fingerprint is totally unique—no one else in history has the same one. You are one-of-a-kind!</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🌍 Our Awesome Planet!</h2>
+            <p class="text-lg leading-relaxed">Earth is incredible! Did you know that there are more trees on Earth than stars in our Milky Way galaxy? And the deepest part of the ocean, the Mariana Trench, is so deep that you could fit Mount Everest inside it and still have a mile of water above it! Our planet is one big, amazing treasure chest of wonders.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-3" style="color: var(--primary-color);">🌈 Silly Science!</h2>
+            <p class="text-lg leading-relaxed">Science can be so silly. You can't hear any sound in space because there's no air for the sound waves to travel through—it's totally silent! And a rainbow isn't really an arch; it's a full circle! You just can't see the bottom half from the ground. So next time you see one, imagine the giant colorful circle it's a part of. Cool, right?</p>
+        </div>
+    </main>
+
+    <script>
+        const mascot = document.getElementById('mascot');
+        const mascotEyes = document.getElementById('mascot-eyes');
+        document.addEventListener('mousemove', (e) => {
+            const mascotRect = mascot.getBoundingClientRect();
+            const mascotCenterX = mascotRect.left + mascotRect.width / 2;
+            const mascotCenterY = mascotRect.top + mascotRect.height / 2;
+            const angle = Math.atan2(e.clientY - mascotCenterY, e.clientX - mascotCenterX);
+            const moveX = Math.cos(angle) * 5;
+            const moveY = Math.sin(angle) * 3;
+            mascotEyes.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+        window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+    </script>
+</body>
+</html>
+

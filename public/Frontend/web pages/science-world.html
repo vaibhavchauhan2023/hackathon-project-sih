@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science World - Terra Learning</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/science-world.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="science-body">
+    <!-- Header -->
+    <header class="header science-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Terra" class="logo">
+                    <span class="logo-text">Terra</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"> Home</a></li>
+                <li><a href="#lessons" class="nav-link active">Lessons</a></li>
+                <li><a href="#experiments" class="nav-link">Experiments</a></li>
+                <li><a href="#quizzes" class="nav-link">Quizzes</a></li>
+                <li><a href="#progress" class="nav-link">My Progress</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="75"></div>
+                    <span class="xp-text">Level 5</span>
+                </div>
+                <div class="science-coins">
+                    <span class="coin-icon">🪙</span>
+                    <span class="coin-count">245</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="science-hero">
+        <div class="hero-bg">
+            <div class="floating-molecules">
+                <div class="molecule">🧬</div>
+                <div class="molecule">⚛️</div>
+                <div class="molecule">🔬</div>
+                <div class="molecule">🌍</div>
+                <div class="molecule">🚀</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="science-title">Welcome to Science World! 🌍</h1>
+                <p class="science-subtitle">Explore the wonders of our universe through fun experiments and discoveries!</p>
+                
+                <div class="world-progress-card">
+                    <h3>Your Science Journey</h3>
+                    <div class="progress-info">
+                        <div class="progress-circle">
+                            <svg class="progress-ring" width="80" height="80">
+                                <circle class="progress-ring-circle" cx="40" cy="40" r="36" stroke="#4A90E2" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="90"></circle>
+                            </svg>
+                            <div class="progress-text">60%</div>
+                        </div>
+                        <div class="progress-details">
+                            <p><strong>12</strong> lessons completed</p>
+                            <p><strong>8</strong> experiments done</p>
+                            <p><strong>5</strong> badges earned</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path" id="lessons">
+        <div class="container">
+            <h2 class="section-title">Choose Your Science Adventure! 🚀</h2>
+            
+            <div class="path-container">
+                <div class="lesson-path">
+                    <!-- Completed Lesson -->
+                    <div class="lesson-node completed" data-lesson="1">
+                        <div class="node-icon">🌱</div>
+                        <div class="node-content">
+                            <h4>Plant Life Cycles</h4>
+                            <p>Completed</p>
+                            <div class="node-stars">⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Lesson -->
+                    <div class="lesson-node current" data-lesson="2">
+                        <div class="node-icon">💧</div>
+                        <div class="node-content">
+                            <h4>Water Cycle Adventure</h4>
+                            <p>In Progress</p>
+                            <div class="node-progress">70%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Next Lesson -->
+                    <div class="lesson-node available" data-lesson="3">
+                        <div class="node-icon">☀️</div>
+                        <div class="node-content">
+                            <h4>Solar System Exploration</h4>
+                            <p>Next Up</p>
+                            <div class="node-reward">+50 XP</div>
+                        </div>
+                    </div>
+
+                    <!-- Next Lesson -->
+                    <div class="lesson-node available" data-lesson="3">
+                        <div class="node-icon">☀️</div>
+                        <div class="node-content">
+                            <h4>Periodic Table</h4>
+                            <p>Next Up</p>
+                            <div class="node-reward">+50 XP</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Locked Lessons -->
+                    <div class="lesson-node locked" data-lesson="4">
+                        <div class="node-icon">🔒</div>
+                        <div class="node-content">
+                            <h4>Chemical Reactions</h4>
+                            <p>Unlock Level 6</p>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-node locked" data-lesson="5">
+                        <div class="node-icon">🔒</div>
+                        <div class="node-content">
+                            <h4>Forces and Motion</h4>
+                            <p>Unlock Level 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Experiments -->
+    <section class="experiments-section" id="experiments">
+        <div class="container">
+            <h2 class="section-title">Fun Science Experiments! 🧪</h2>
+            
+            <div class="experiments-grid">
+                <div class="experiment-card ">
+                    <div class="experiment-icon">🌋</div>
+                    <h3>Virtual Volcano</h3>
+                    <p>Create a safe volcanic eruption and learn about pressure and reactions!</p>
+                    <div class="experiment-difficulty">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="time">⏱️ 15 min</span>
+                    </div>
+                    <button class="btn btn-experiment">Start Experiment</button>
+                </div>
+
+                <div class="experiment-card rainbow">
+                    <div class="experiment-icon">🌈</div>
+                    <h3>Rainbow in a Jar</h3>
+                    <p>Discover density and create beautiful layered colors!</p>
+                    <div class="experiment-difficulty">
+                        <span class="difficulty medium">Medium</span>
+                        <span class="time">⏱️ 20 min</span>
+                    </div>
+                    <button class="btn btn-experiment">Start Experiment</button>
+                </div>
+
+                <div class="experiment-card magnet">
+                    <div class="experiment-icon">🧲</div>
+                    <h3>Magnetic Magic</h3>
+                    <p>Explore magnetism with interactive magnetic field games!</p>
+                    <div class="experiment-difficulty">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="time">⏱️ 10 min</span>
+                    </div>
+                    <button class="btn btn-experiment">Start Experiment</button>
+                </div>
+
+                <div class="experiment-card crystals">
+                    <div class="experiment-icon">💎</div>
+                    <h3>Crystal Garden</h3>
+                    <p>Grow virtual crystals and learn about molecular structures!</p>
+                    <div class="experiment-difficulty">
+                        <span class="difficulty hard">Advanced</span>
+                        <span class="time">⏱️ 30 min</span>
+                    </div>
+                    <button class="btn btn-experiment locked">🔒 Level 6</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quiz Section -->
+    <section class="quiz-section" id="quizzes">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge! 🧠</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-card active">
+                    <div class="quiz-header">
+                        <h3>Plant Life Cycles Quiz</h3>
+                        <div class="quiz-progress">
+                            <span>Question 1 of 5</span>
+                            <div class="quiz-progress-bar">
+                                <div class="quiz-progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-content">
+                        <h4>What do plants need to grow? 🌱</h4>
+                        <div class="answer-options">
+                            <button class="answer-btn" data-answer="a">
+                                <span class="option-letter">A</span>
+                                <span class="option-text">Only water</span>
+                            </button>
+                            <button class="answer-btn" data-answer="b">
+                                <span class="option-letter">B</span>
+                                <span class="option-text">Sunlight, water, and air</span>
+                            </button>
+                            <button class="answer-btn" data-answer="c">
+                                <span class="option-letter">C</span>
+                                <span class="option-text">Only sunlight</span>
+                            </button>
+                            <button class="answer-btn" data-answer="d">
+                                <span class="option-letter">D</span>
+                                <span class="option-text">Only soil</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button class="btn btn-secondary" id="skipQuestion">Skip</button>
+                        <button class="btn btn-primary" id="nextQuestion" disabled>Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Progress -->
+    <section class="achievements-section" id="progress">
+        <div class="container">
+            <h2 class="section-title">Your Science Achievements! 🏆</h2>
+            
+            <div class="achievements-container">
+                <div class="achievement-grid">
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🌱</div>
+                        <h4>Plant Expert</h4>
+                        <p>Completed Plant Life Cycles</p>
+                        <div class="badge-date">Earned 3 days ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">💧</div>
+                        <h4>Water Detective</h4>
+                        <p>Discovered the Water Cycle</p>
+                        <div class="badge-date">Earned 1 day ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">🔬</div>
+                        <h4>Lab Assistant</h4>
+                        <p>Complete 3 experiments</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 66%"></div>
+                            </div>
+                            <span>2/3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🚀</div>
+                        <h4>Space Explorer</h4>
+                        <p>Complete Solar System lesson</p>
+                        <div class="badge-requirement">Unlock at Level 6</div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🏆</div>
+                        <h4>Science Master</h4>
+                        <p>Complete all Science World lessons</p>
+                        <div class="badge-requirement">Complete all lessons</div>
+                    </div>
+                    
+                    <div class="achievement-badge mystery">
+                        <div class="badge-icon">❓</div>
+                        <h4>Mystery Badge</h4>
+                        <p>Keep exploring to discover!</p>
+                        <div class="badge-requirement">???</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Mascot -->
+    <div class="science-mascot" id="scienceMascot">
+        <div class="mascot-bubble">
+            <p class="mascot-text">Great job on your plant studies! Ready to explore the water cycle? 💧</p>
+        </div>
+        <div class="mascot-character science-character">
+            <span class="mascot-icon">🔬</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer science-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Science World</h4>
+                    <p>Discover the wonders of science through fun, interactive learning!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Back to Terra</a></li>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#help">Help & Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Other Worlds</h4>
+                    <ul>
+                        <li><a href="#math">Math Galaxy</a></li>
+                        <li><a href="#history">History Land</a></li>
+                        <li><a href="#lifeskills">Life Skills Village</a></li>
+                        <li><a href="#creative">Creative Corner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/science-world.js"></script>
+</body>
+</html>

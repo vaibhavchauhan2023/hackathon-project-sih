@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Future City - Terra Learning</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/ai-future-city.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="future-body">
+    <!-- Header -->
+    <header class="header future-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Terra" class="logo">
+                    <span class="logo-text">Pappy</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"> Home</a></li>
+                <li><a href="#city-map" class="nav-link active">Future City</a></li>
+                <li><a href="#ai-labs" class="nav-link">AI Labs</a></li>
+                <li><a href="#innovations" class="nav-link">Innovations</a></li>
+                <li><a href="#achievements" class="nav-link"> Progress</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="45"></div>
+                    <span class="xp-text">Level 7</span>
+                </div>
+                <div class="future-tokens">
+                    <span class="token-icon">⚡</span>
+                    <span class="token-count">200</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="future-hero">
+        <div class="hero-bg">
+            <div class="floating-tech">
+                <div class="tech-element">🤖</div>
+                <div class="tech-element">🚀</div>
+                <div class="tech-element">💡</div>
+                <div class="tech-element">⚡</div>
+                <div class="tech-element">🔬</div>
+                <div class="tech-element">🌐</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="future-title">Welcome to AI & Future City! 🚀</h1>
+                <p class="future-subtitle">Explore the amazing world of artificial intelligence, robotics, and tomorrow's technology!</p>
+                
+                <div class="city-progress-card">
+                    <h3>Your Future Journey</h3>
+                    <div class="progress-info">
+                        <div class="progress-circle">
+                            <svg class="progress-ring" width="80" height="80">
+                                <circle class="progress-ring-circle" cx="40" cy="40" r="36" stroke="#00BCD4" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="115"></circle>
+                            </svg>
+                            <div class="progress-text">50%</div>
+                        </div>
+                        <div class="progress-details">
+                            <p><strong>6</strong> AI concepts learned</p>
+                            <p><strong>4</strong> robots built</p>
+                            <p><strong>3</strong> innovations created</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future City Map Section -->
+    <section class="city-map-section" id="city-map">
+        <div class="container">
+            <h2 class="section-title">Explore Future City! 🌆</h2>
+            
+            <div class="city-map">
+                <div class="city-zone ai-center completed" data-zone="ai-center">
+                    <div class="zone-icon">🤖</div>
+                    <div class="zone-name">AI Research Center</div>
+                    <div class="zone-status">✅ Explored</div>
+                </div>
+
+                <div class="city-zone robot-lab current" data-zone="robot-lab">
+                    <div class="zone-icon">🔧</div>
+                    <div class="zone-name">Robot Building Lab</div>
+                    <div class="zone-status">⚡ Active</div>
+                </div>
+
+                <div class="city-zone tech-hub available" data-zone="tech-hub">
+                    <div class="zone-icon">💻</div>
+                    <div class="zone-name">Tech Innovation Hub</div>
+                    <div class="zone-status">🔓 Ready</div>
+                </div>
+
+                <div class="city-zone space-station available" data-zone="space-station">
+                    <div class="zone-icon">🚀</div>
+                    <div class="zone-name">Space Exploration</div>
+                    <div class="zone-status">🔓 Ready</div>
+                </div>
+
+                <div class="city-zone data-center locked" data-zone="data-center">
+                    <div class="zone-icon">🔒</div>
+                    <div class="zone-name">Quantum Data Center</div>
+                    <div class="zone-status">🔒 Level 8</div>
+                </div>
+
+                <div class="city-zone smart-home available" data-zone="smart-home">
+                    <div class="zone-icon">🏠</div>
+                    <div class="zone-name">Smart Home Demo</div>
+                    <div class="zone-status">🔓 Ready</div>
+                </div>
+
+                <div class="city-zone virtual-reality locked" data-zone="virtual-reality">
+                    <div class="zone-icon">🥽</div>
+                    <div class="zone-name">VR Experience</div>
+                    <div class="zone-status">🔒 Level 9</div>
+                </div>
+
+                <div class="city-zone innovation-center available" data-zone="innovation-center">
+                    <div class="zone-icon">💡</div>
+                    <div class="zone-name">Innovation Center</div>
+                    <div class="zone-status">🔓 Ready</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Labs Section -->
+    <section class="ai-labs-section" id="ai-labs">
+        <div class="container">
+            <h2 class="section-title">AI Learning Labs! 🧠</h2>
+            
+            <div class="labs-grid">
+                <div class="lab-category machine-learning">
+                    <div class="lab-header">
+                        <div class="lab-icon">🤖</div>
+                        <h3>Machine Learning</h3>
+                        <div class="lab-progress">4/6</div>
+                    </div>
+                    <div class="concepts-grid">
+                        <div class="concept-item completed">
+                            <div class="concept-icon">🧠</div>
+                            <div class="concept-name">What is AI?</div>
+                            <div class="concept-status">✅ Learned</div>
+                        </div>
+                        <div class="concept-item completed">
+                            <div class="concept-icon">📊</div>
+                            <div class="concept-name">Pattern Recognition</div>
+                            <div class="concept-status">✅ Learned</div>
+                        </div>
+                        <div class="concept-item current">
+                            <div class="concept-icon">🎯</div>
+                            <div class="concept-name">Training AI</div>
+                            <div class="concept-status">⚡ Learning</div>
+                        </div>
+                        <div class="concept-item available">
+                            <div class="concept-icon">🔮</div>
+                            <div class="concept-name">AI Predictions</div>
+                            <div class="concept-status">📖 Next</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lab-category robotics">
+                    <div class="lab-header">
+                        <div class="lab-icon">🤖</div>
+                        <h3>Robotics & Automation</h3>
+                        <div class="lab-progress">3/8</div>
+                    </div>
+                    <div class="concepts-grid">
+                        <div class="concept-item completed">
+                            <div class="concept-icon">⚙️</div>
+                            <div class="concept-name">How Robots Move</div>
+                            <div class="concept-status">✅ Learned</div>
+                        </div>
+                        <div class="concept-item completed">
+                            <div class="concept-icon">👁️</div>
+                            <div class="concept-name">Robot Sensors</div>
+                            <div class="concept-status">✅ Learned</div>
+                        </div>
+                        <div class="concept-item current">
+                            <div class="concept-icon">💻</div>
+                            <div class="concept-name">Programming Robots</div>
+                            <div class="concept-status">⚡ Learning</div>
+                        </div>
+                        <div class="concept-item locked">
+                            <div class="concept-icon">🔒</div>
+                            <div class="concept-name">Advanced Robotics</div>
+                            <div class="concept-status">🔒 Level 8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lab-category future-tech">
+                    <div class="lab-header">
+                        <div class="lab-icon">🔬</div>
+                        <h3>Future Technologies</h3>
+                        <div class="lab-progress">2/10</div>
+                    </div>
+                    <div class="concepts-grid">
+                        <div class="concept-item completed">
+                            <div class="concept-icon">🌐</div>
+                            <div class="concept-name">Internet of Things</div>
+                            <div class="concept-status">✅ Learned</div>
+                        </div>
+                        <div class="concept-item current">
+                            <div class="concept-icon">🔋</div>
+                            <div class="concept-name">Clean Energy</div>
+                            <div class="concept-status">⚡ Learning</div>
+                        </div>
+                        <div class="concept-item available">
+                            <div class="concept-icon">🚗</div>
+                            <div class="concept-name">Self-Driving Cars</div>
+                            <div class="concept-status">📖 Next</div>
+                        </div>
+                        <div class="concept-item available">
+                            <div class="concept-icon">🏥</div>
+                            <div class="concept-name">Medical Technology</div>
+                            <div class="concept-status">📖 Next</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Activities Section -->
+    <section class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Future Tech Activities! 🎮</h2>
+            
+            <div class="activities-grid">
+                <div class="activity-card robot-builder">
+                    <div class="activity-icon">🤖</div>
+                    <h3>Build Your Robot</h3>
+                    <p>Design and program your own virtual robot with different parts and abilities!</p>
+                    <div class="activity-info">
+                        <span class="difficulty beginner">Beginner</span>
+                        <span class="time">⏱️ 25 min</span>
+                    </div>
+                    <button class="btn btn-activity">Start Building</button>
+                </div>
+
+                <div class="activity-card ai-trainer">
+                    <div class="activity-icon">🧠</div>
+                    <h3>Train an AI</h3>
+                    <p>Teach an AI to recognize patterns and make smart decisions through fun games!</p>
+                    <div class="activity-info">
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <span class="time">⏱️ 30 min</span>
+                    </div>
+                    <button class="btn btn-activity">Start Training</button>
+                </div>
+
+                <div class="activity-card future-city">
+                    <div class="activity-icon">🏙️</div>
+                    <h3>Design Future City</h3>
+                    <p>Plan and build a smart city with renewable energy and AI-powered systems!</p>
+                    <div class="activity-info">
+                        <span class="difficulty advanced">Advanced</span>
+                        <span class="time">⏱️ 40 min</span>
+                    </div>
+                    <button class="btn btn-activity">Start Designing</button>
+                </div>
+
+                <div class="activity-card space-mission">
+                    <div class="activity-icon">🚀</div>
+                    <h3>Space Mission Planner</h3>
+                    <p>Plan a mission to Mars using AI and robotics to explore the red planet!</p>
+                    <div class="activity-info">
+                        <span class="difficulty expert">Expert</span>
+                        <span class="time">⏱️ 45 min</span>
+                    </div>
+                    <button class="btn btn-activity locked">🔒 Level 8</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovations Showcase Section -->
+    <section class="innovations-section" id="innovations">
+        <div class="container">
+            <h2 class="section-title">Amazing Innovations! 💡</h2>
+            
+            <div class="innovations-showcase">
+                <div class="innovation-card featured">
+                    <div class="innovation-visual">
+                        <div class="innovation-animation ai-brain">
+                            <div class="brain-node"></div>
+                            <div class="brain-node"></div>
+                            <div class="brain-node"></div>
+                            <div class="brain-connection"></div>
+                            <div class="brain-connection"></div>
+                        </div>
+                    </div>
+                    <div class="innovation-content">
+                        <h3>Artificial Intelligence</h3>
+                        <p>AI helps computers learn and make decisions like humans! It's used in voice assistants, games, and even helps doctors.</p>
+                        <div class="innovation-examples">
+                            <span class="example">🗣️ Voice Assistants</span>
+                            <span class="example">🎮 Smart Games</span>
+                            <span class="example">🏥 Medical AI</span>
+                        </div>
+                        <button class="btn btn-explore">Explore AI</button>
+                    </div>
+                </div>
+                
+                <div class="innovations-grid">
+                    <div class="innovation-item">
+                        <div class="item-icon">🤖</div>
+                        <h4>Helper Robots</h4>
+                        <p>Robots that can clean, cook, and help people with daily tasks!</p>
+                    </div>
+                    <div class="innovation-item">
+                        <div class="item-icon">🚗</div>
+                        <h4>Self-Driving Cars</h4>
+                        <p>Cars that can drive themselves safely using AI and sensors!</p>
+                    </div>
+                    <div class="innovation-item">
+                        <div class="item-icon">🌱</div>
+                        <h4>Smart Farming</h4>
+                        <p>Using technology to grow food more efficiently and sustainably!</p>
+                    </div>
+                    <div class="innovation-item">
+                        <div class="item-icon">🏠</div>
+                        <h4>Smart Homes</h4>
+                        <p>Houses that learn your habits and adjust temperature, lights automatically!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Playground Section -->
+    <section class="coding-section">
+        <div class="container">
+            <h2 class="section-title">Code Your Future! 💻</h2>
+            
+            <div class="coding-playground">
+                <div class="coding-interface">
+                    <div class="code-editor">
+                        <h3>Visual Programming</h3>
+                        <div class="block-coding-area">
+                            <div class="coding-blocks">
+                                <div class="code-block movement" draggable="true">
+                                    <span class="block-icon">➡️</span>
+                                    <span>Move Forward</span>
+                                </div>
+                                <div class="code-block action" draggable="true">
+                                    <span class="block-icon">🔄</span>
+                                    <span>Turn Right</span>
+                                </div>
+                                <div class="code-block condition" draggable="true">
+                                    <span class="block-icon">❓</span>
+                                    <span>If Wall Ahead</span>
+                                </div>
+                                <div class="code-block loop" draggable="true">
+                                    <span class="block-icon">🔁</span>
+                                    <span>Repeat 3 Times</span>
+                                </div>
+                            </div>
+                            
+                            <div class="code-canvas" id="codeCanvas">
+                                <div class="canvas-instruction">
+                                    <p>Drag blocks here to program your robot! 🤖</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="coding-controls">
+                            <button class="btn btn-run" onclick="runCode()">▶️ Run Code</button>
+                            <button class="btn btn-clear" onclick="clearCode()">🗑️ Clear</button>
+                            <button class="btn btn-save" onclick="saveCode()">💾 Save</button>
+                        </div>
+                    </div>
+                    
+                    <div class="robot-simulator">
+                        <h3>Robot Simulator</h3>
+                        <div class="simulator-screen">
+                            <div class="robot-avatar" id="robotAvatar">🤖</div>
+                            <div class="simulator-grid">
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell goal">🎯</div>
+                            </div>
+                        </div>
+                        <div class="simulator-status">
+                            <span id="robotStatus">Ready to start!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Your Tech Achievements! 🏆</h2>
+            
+            <div class="achievements-container">
+                <div class="achievement-grid">
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🤖</div>
+                        <h4>AI Explorer</h4>
+                        <p>Learned the basics of artificial intelligence</p>
+                        <div class="badge-date">Earned 1 week ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🔧</div>
+                        <h4>Robot Builder</h4>
+                        <p>Built and programmed your first robot</p>
+                        <div class="badge-date">Earned 5 days ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">💻</div>
+                        <h4>Code Master</h4>
+                        <p>Complete 10 coding challenges</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span>7/10</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">🚀</div>
+                        <h4>Future Innovator</h4>
+                        <p>Design future city solutions</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                            <span>3/6</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🧠</div>
+                        <h4>AI Trainer</h4>
+                        <p>Successfully train an AI model</p>
+                        <div class="badge-requirement">Complete AI Training</div>
+                    </div>
+                    
+                    <div class="achievement-badge mystery">
+                        <div class="badge-icon">❓</div>
+                        <h4>Tech Visionary</h4>
+                        <p>Something amazing awaits!</p>
+                        <div class="badge-requirement">???</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Mascot -->
+    <div class="ai-mascot" id="aiMascot">
+        <div class="mascot-bubble">
+            <p class="mascot-text">Welcome to the future! Ready to learn about AI and robots? 🤖✨</p>
+        </div>
+        <div class="mascot-character ai-character">
+            <span class="mascot-icon">🤖</span>
+            <div class="ai-pulse"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer future-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI & Future City</h4>
+                    <p>Explore tomorrow's technology and learn about artificial intelligence and robotics!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Back to Terra</a></li>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#help">Tech Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Other Worlds</h4>
+                    <ul>
+                        <li><a href="science-world.html">Science World</a></li>
+                        <li><a href="math-galaxy.html">Math Galaxy</a></li>
+                        <li><a href="history-land.html">History Land</a></li>
+                        <li><a href="life-skills.html">Life Skills Village</a></li>
+                        <li><a href="creative-corner.html">Creative Corner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/ai-future-city.js"></script>
+</body>
+</html>

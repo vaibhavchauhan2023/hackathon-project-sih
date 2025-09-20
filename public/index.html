@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 id="formTitle">Login</h2>
+            
+            <!-- Login/Signup Form -->
+            <form id="authForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <button type="submit" id="submitBtn">Login</button>
+                
+                <p class="toggle-text">
+                    <span id="toggleQuestion">Don't have an account?</span>
+                    <a href="#" id="toggleLink">Sign Up</a>
+                </p>
+            </form>
+            
+            <!-- Messages -->
+            <div id="message"></div>
+            
+            <!-- User Info (Hidden initially) -->
+            <div id="userInfo" style="display: none;">
+                <h3>Welcome!</h3>
+                <p id="userEmail"></p>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

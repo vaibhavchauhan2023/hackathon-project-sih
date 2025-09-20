@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font and base styles */
+        body {
+            font-family: 'Fredoka One', cursive;
+            background-color: #361169;
+            color: #ffffff;
+        }
+        
+        :root {
+            --primary-color: #F09738;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .mascot-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #4A1E8C; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ffb154; }
+    </style>
+</head>
+<body class="min-h-screen p-4 transition-opacity duration-500 ease-in-out" style="opacity: 0;">
+
+    <!-- Header with Mascot -->
+    <header class="sticky top-4 z-50 w-full max-w-5xl mx-auto bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-4 flex items-center gap-4">
+        <div id="mascot" class="mascot-float transition-transform duration-300 hover:scale-110 cursor-pointer flex-shrink-0">
+             <svg width="100" height="110" viewBox="0 0 150 180" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 76.5C133.5 61.5 125 47.5 119 43C113 38.5 106 43 106 43L111 68L128.5 76.5Z" fill="#9B59B6"/><path d="M21.5 76.5C16.5 61.5 25 47.5 31 43C37 38.5 44 43 44 43L39 68L21.5 76.5Z" fill="#9B59B6"/><path d="M117.433 138.995C113.833 144.328 107.5 147.5 102.5 147.5C92.5 147.5 86.5 137.5 82 135.5C77.5 133.5 72.5 133.5 68 135.5C63.5 137.5 57.5 147.5 47.5 147.5C42.5 147.5 36.1667 144.328 32.5667 138.995C24.4667 127.095 24.1667 101.5 24.1667 101.5C36.6667 96.5 75 95.5 125.833 101.5C125.833 101.5 125.533 127.095 117.433 138.995Z" fill="#8E44AD"/><ellipse cx="75" cy="100" rx="60" ry="65" fill="#8E44AD"/><ellipse cx="75" cy="115" rx="45" ry="40" fill="#9B59B6"/><path d="M75 35C72.3333 30.3333 71.5 19.5 75 15C78.5 19.5 77.6667 30.3333 75 35Z" fill="#8E44AD"/><path d="M90 30C86.5 24.5 82.5 15 88 10C93.5 15 93.5 24.5 90 30Z" fill="#8E44AD"/><path d="M60 30C63.5 24.5 67.5 15 62 10C56.5 15 56.5 24.5 60 30Z" fill="#8E44AD"/><circle cx="58" cy="70" r="18" fill="white"/><circle cx="92" cy="70" r="18" fill="white"/><path d="M75 82C81.5 85 85 82.8333 87 80C82.5 79.5 67.5 79.5 63 80C65 82.8333 68.5 85 75 82Z" fill="#F09738"/><path d="M75 75C85 75 87 80 87 80C82.5 79.5 67.5 79.5 63 80C63 80 65 75 75 75Z" fill="#F39C12"/><g id="mascot-eyes"><circle cx="58" cy="70" r="9" fill="#2C3E50"/><circle cx="92" cy="70" r="9" fill="#2C3E50"/></g><path d="M57 159C57 163.418 53.4183 167 49 167C44.5817 167 41 163.418 41 159C41 156.5 44 152 49 152C54 152 57 156.5 57 159Z" fill="#F09738"/><path d="M109 159C109 163.418 105.418 167 101 167C96.5817 167 93 163.418 93 159C93 156.5 96 152 101 152C106 152 109 156.5 109 159Z" fill="#F09738"/></svg>
+        </div>
+        <div>
+            <h1 class="text-2xl md:text-3xl font-bold" style="color: var(--primary-color);">Welcome to Story World!</h1>
+            <p class="text-md md:text-lg">I'm Pappy! Choose a category below to start reading!</p>
+        </div>
+    </header>
+
+    <!-- Main container for story categories -->
+    <main class="w-full max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Category Card Template -->
+        <a href="space_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C9.24 2 7 4.24 7 7v5.58c0 .85-.36 1.63-0.95 2.19L4 17h16l-2.05-2.23c-.59-.56-.95-1.34-.95-2.19V7c0-2.76-2.24-5-5-5zM12 20c-1.1 0-2-0.9-2-2h4c0 1.1-0.9 2-2 2z" fill="#F09738"/>
+                    <path d="M19.38 5.48c-0.34-0.87-1.1-1.54-2-1.84l-2.92-0.97c-0.92-0.31-1.92 0.35-2.23 1.27l-0.62 1.87h9.53l-1.76-0.33z" fill="currentColor"/>
+                    <ellipse cx="12" cy="18" rx="7" ry="2" fill="#F39C12"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Space Stories</h2>
+                <p class="text-lg">Zoom through galaxies, meet silly aliens, and explore bouncy planets!</p>
+            </div>
+        </a>
+        <a href="monument_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+             <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 21h16" stroke="#F09738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 18V9l-2 2" stroke="#F09738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 18V9l-2 2" stroke="#F09738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 18V9l-2 2" stroke="#F09738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 18V9l-2 2" stroke="#F09738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 7l7-4 7 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Monument Stories</h2>
+                <p class="text-lg">Uncover the secrets of the Taj Mahal, the Great Wall, and more!</p>
+            </div>
+        </a>
+        <a href="moral_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#F09738" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Moral Stories</h2>
+                <p class="text-lg">Learn about kindness, sharing, and being a good friend.</p>
+            </div>
+        </a>
+        <a href="civics_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V13H5V6.3l7-3.11v10.8z" fill="#F09738"/>
+                    <path d="M5 6.3V13h7v8.94c-3.72-1.15-6.47-4.82-7-8.94H5z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Civic Sense Stories</h2>
+                <p class="text-lg">Discover how being a good citizen can be a superpower!</p>
+            </div>
+        </a>
+        <a href="facts_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" fill="#F09738"/>
+                    <path d="M12 4c-2.76 0-5 2.24-5 5h10c0-2.76-2.24-5-5-5z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Fun Facts Stories</h2>
+                <p class="text-lg">Prepare to be amazed by the weirdest facts in the universe!</p>
+            </div>
+        </a>
+        <a href="history_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V9l-7-7zm-2 16H8v-2h3v2zm0-4H8v-2h3v2zm4 0h-2v-2h2v2zm0-4h-2v-2h2v2z" fill="#F09738"/>
+                    <path d="M13 9V3.5L18.5 9H13z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">History Stories</h2>
+                <p class="text-lg">Travel back in time to meet inventors and explore ancient cities.</p>
+            </div>
+        </a>
+        <a href="geography_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#F09738"/>
+                    <path d="M11 15v1c0 1.1.9 2 2 2v1.93c3.95-.49 7-3.85 7-7.93 0-3.35-2.07-6.22-5-7.41V7c0 1.1-.9 2-2 2H9v2h2c.55 0 1 .45 1 1v3h1c.9 0 1.64.58 1.9 1.39.26.81.1 1.69-.41 2.35-.05.06-.1.12-.16.17z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Geography Stories</h2>
+                <p class="text-lg">Journey from the tallest mountains to the deepest oceans.</p>
+            </div>
+        </a>
+        <a href="sports_stories.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 3.75H3.75C3.33579 3.75 3 4.08579 3 4.5V19.5C3 19.9142 3.33579 20.25 3.75 20.25H20.25C20.6642 20.25 21 19.9142 21 19.5V4.5C21 4.08579 20.6642 3.75 20.25 3.75Z" stroke="#F09738" stroke-width="1.5"/>
+                    <path d="M12 9.75C13.2426 9.75 14.25 8.74264 14.25 7.5C14.25 6.25736 13.2426 5.25 12 5.25C10.7574 5.25 9.75 6.25736 9.75 7.5C9.75 8.74264 10.7574 9.75 12 9.75Z" fill="#F09738"/>
+                    <path d="M17.25 18.75L15 15.75L12 18L9 15.75L6.75 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Sports Stories</h2>
+                <p class="text-lg">Read about amazing athletes and the spirit of the game!</p>
+            </div>
+        </a>
+        <a href="mystery.html" class="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="p-6 bg-black bg-opacity-20">
+                <svg class="w-full h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 3.75H3.75C3.33579 3.75 3 4.08579 3 4.5V19.5C3 19.9142 3.33579 20.25 3.75 20.25H20.25C20.6642 20.25 21 19.9142 21 19.5V4.5C21 4.08579 20.6642 3.75 20.25 3.75Z" stroke="#F09738" stroke-width="1.5"/>
+                    <path d="M12 9.75C13.2426 9.75 14.25 8.74264 14.25 7.5C14.25 6.25736 13.2426 5.25 12 5.25C10.7574 5.25 9.75 6.25736 9.75 7.5C9.75 8.74264 10.7574 9.75 12 9.75Z" fill="#F09738"/>
+                    <path d="M17.25 18.75L15 15.75L12 18L9 15.75L6.75 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--primary-color);">Sports Stories</h2>
+                <p class="text-lg">Read about amazing athletes and the spirit of the game!</p>
+            </div>
+        </a>
+    </main>
+
+    <script>
+        const mascot = document.getElementById('mascot');
+        const mascotEyes = document.getElementById('mascot-eyes');
+        
+        document.addEventListener('mousemove', (e) => {
+            const mascotRect = mascot.getBoundingClientRect();
+            const mascotCenterX = mascotRect.left + mascotRect.width / 2;
+            const mascotCenterY = mascotRect.top + mascotRect.height / 2;
+            const angle = Math.atan2(e.clientY - mascotCenterY, e.clientX - mascotCenterX);
+            const moveX = Math.cos(angle) * 5;
+            const moveY = Math.sin(angle) * 3;
+            mascotEyes.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
+
+
+
+

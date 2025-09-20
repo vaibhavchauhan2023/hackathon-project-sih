@@ -1,0 +1,782 @@
+/* Science World Specific Styles */
+
+.science-body {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+}
+
+.science-header {
+    background: linear-gradient(135deg, #3181de 0%, #1565C0 100%);
+}
+
+.science-header .logo-container a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.science-header .logo-text {
+    color: white;
+}
+
+.science-coins {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 193, 7, 0.2);
+    padding: 8px 12px;
+    border-radius: 15px;
+    border: 2px solid #FFC107;
+}
+
+.coin-icon {
+    font-size: 1.2rem;
+}
+
+.coin-count {
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.science-hero {
+    min-height: 80vh;
+    position: relative;
+    background: linear-gradient(135deg, #4446e7 0%, #0097A7 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.floating-molecules {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.molecule {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatMolecule 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.molecule:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.molecule:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+.molecule:nth-child(3) { top: 30%; left: 70%; animation-delay: 2s; }
+.molecule:nth-child(4) { top: 80%; left: 20%; animation-delay: 3s; }
+.molecule:nth-child(5) { top: 40%; left: 40%; animation-delay: 4s; }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.science-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.science-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.world-progress-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    margin: 40px auto 0;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.world-progress-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.progress-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.progress-details p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Learning Path */
+.learning-path {
+    padding: 100px 0;
+    background: white;
+}
+
+.path-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.lesson-path {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.lesson-path::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #4CAF50, #2196F3, #FF9800, #ccc, #ccc);
+    border-radius: 2px;
+}
+
+.lesson-node {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: var(--border-radius-large);
+    background: white;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.lesson-node::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
+}
+
+.lesson-node.completed {
+    border-left: 6px solid var(--primary-green);
+    background: linear-gradient(135deg, var(--pastel-green), white);
+}
+
+.lesson-node.completed::before {
+    background: var(--primary-green);
+    content: '✅';
+}
+
+.lesson-node.current {
+    border-left: 6px solid var(--primary-blue);
+    background: linear-gradient(135deg, var(--pastel-blue), white);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+.lesson-node.current::before {
+    background: var(--primary-blue);
+    content: '▶️';
+    animation: pulse 2s infinite;
+}
+
+.lesson-node.available {
+    border-left: 6px solid var(--primary-orange);
+    background: linear-gradient(135deg, var(--pastel-orange), white);
+}
+
+.lesson-node.available::before {
+    background: var(--primary-orange);
+    content: '🎯';
+}
+
+.lesson-node.locked {
+    border-left: 6px solid #ccc;
+    background: linear-gradient(135deg, #f5f5f5, white);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.lesson-node.locked::before {
+    background: #ccc;
+    content: '🔒';
+}
+
+.node-icon {
+    font-size: 3rem;
+    margin-left: 60px;
+}
+
+.node-content {
+    flex: 1;
+}
+
+.node-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.node-content p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.node-stars {
+    font-size: 1.2rem;
+}
+
+.node-progress {
+    background: var(--pastel-blue);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--primary-blue);
+    display: inline-block;
+}
+
+.node-reward {
+    background: var(--pastel-orange);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--primary-orange);
+    display: inline-block;
+}
+
+/* Experiments Section */
+.experiments-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-blue));
+}
+
+.experiments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.experiment-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experiment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B35, #F7931E);
+}
+
+.experiment-card.volcano::before { background: linear-gradient(90deg, #FF5722, #FF9800); }
+.experiment-card.rainbow::before { background: linear-gradient(90deg, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3, #00BCD4, #009688, #4CAF50, #8BC34A, #CDDC39, #FFEB3B, #FFC107, #FF9800, #FF5722); }
+.experiment-card.magnet::before { background: linear-gradient(90deg, #607D8B, #455A64); }
+.experiment-card.crystals::before { background: linear-gradient(90deg, #9C27B0, #E91E63); }
+
+.experiment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.experiment-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.experiment-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.experiment-card p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.experiment-difficulty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.difficulty {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty.easy { background: var(--pastel-green); color: var(--primary-green); }
+.difficulty.medium { background: var(--pastel-yellow); color: var(--primary-yellow); }
+.difficulty.hard { background: var(--pastel-pink); color: var(--primary-pink); }
+
+.time {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.btn-experiment {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.btn-experiment.locked {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 40px;
+    box-shadow: var(--shadow-card);
+    border: 3px solid var(--primary-blue);
+}
+
+.quiz-header {
+    margin-bottom: 30px;
+}
+
+.quiz-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.quiz-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quiz-progress span {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.quiz-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin: 0 15px;
+}
+
+.quiz-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.question-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.answer-options {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.answer-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius-small);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.answer-btn:hover {
+    border-color: var(--primary-blue);
+    background: var(--pastel-blue);
+    transform: translateX(5px);
+}
+
+.answer-btn.selected {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: white;
+}
+
+.answer-btn.correct {
+    border-color: var(--primary-green);
+    background: var(--primary-green);
+    color: white;
+}
+
+.answer-btn.incorrect {
+    border-color: #f44336;
+    background: #f44336;
+    color: white;
+}
+
+.option-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--pastel-blue);
+    border-radius: 50%;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.answer-btn.selected .option-letter,
+.answer-btn.correct .option-letter,
+.answer-btn.incorrect .option-letter {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.quiz-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Achievements Section */
+.achievements-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--pastel-yellow), var(--pastel-green));
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.achievement-badge {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-badge.earned {
+    background: linear-gradient(135deg, var(--pastel-yellow), white);
+    border: 3px solid var(--primary-yellow);
+    transform: scale(1.02);
+}
+
+.achievement-badge.earned .badge-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(245, 166, 35, 0.3), transparent 70%);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.achievement-badge.in-progress {
+    border: 3px solid var(--primary-blue);
+}
+
+.achievement-badge.locked {
+    opacity: 0.6;
+    background: #f5f5f5;
+    border: 2px solid #ccc;
+}
+
+.achievement-badge.mystery {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: 3px solid #9C27B0;
+}
+
+.achievement-badge:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.badge-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-badge h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-badge.mystery h4 {
+    color: white;
+}
+
+.achievement-badge p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-badge.mystery p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-date {
+    font-size: 0.8rem;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.badge-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-progress .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.badge-progress .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+    border-radius: 3px;
+}
+
+.badge-requirement {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.achievement-badge.mystery .badge-requirement {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Science Mascot */
+.science-mascot {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.science-character {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    border: 3px solid white;
+}
+
+.mascot-icon {
+    font-size: 1.8rem;
+}
+
+/* Animations */
+@keyframes floatMolecule {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+}
+
+@keyframes glow {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .science-title {
+        font-size: 2.5rem;
+    }
+    
+    .progress-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .lesson-path::before {
+        display: none;
+    }
+    
+    .lesson-node::before {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        order: -1;
+    }
+    
+    .lesson-node {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .node-icon {
+        margin-left: 0;
+        font-size: 2.5rem;
+    }
+    
+    .experiments-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .quiz-card {
+        padding: 25px;
+    }
+    
+    .quiz-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .science-title {
+        font-size: 2rem;
+    }
+    
+    .world-progress-card {
+        padding: 20px;
+    }
+    
+    .lesson-node {
+        padding: 15px;
+    }
+    
+    .experiment-card {
+        padding: 20px;
+    }
+    
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-badge {
+        padding: 20px;
+    }
+    
+    .science-mascot {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .mascot-bubble {
+        max-width: 200px;
+        font-size: 0.8rem;
+    }
+}

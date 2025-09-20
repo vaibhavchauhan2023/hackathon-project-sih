@@ -1,0 +1,766 @@
+/* Parent Dashboard Specific Styles */
+
+/* Parent Body Styling */
+.parent-body {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+}
+
+.parent-header {
+    background: linear-gradient(135deg, #2E3A4B 0%, #4A5568 100%);
+}
+
+.parent-header .navbar {
+    color: white;
+}
+
+.parent-header .logo-container a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.parent-header .logo-text {
+    color: white;
+}
+
+.parent-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.parent-nav .nav-link:hover,
+.parent-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.parent-greeting {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+.parent-main {
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+/* Welcome Section */
+.parent-welcome {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.parent-welcome h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.parent-welcome p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+
+/* Quick Stats */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.stat-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stat-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Progress Overview */
+.progress-overview {
+    padding: 100px 0;
+    background: white;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.progress-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 25px;
+    box-shadow: var(--shadow-card);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.progress-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.progress-card.science-progress {
+    border-color: var(--primary-blue);
+}
+
+.progress-card.math-progress {
+    border-color: var(--primary-purple);
+}
+
+.progress-card.history-progress {
+    border-color: var(--primary-orange);
+}
+
+.progress-card.lifeskills-progress {
+    border-color: var(--primary-pink);
+}
+
+.progress-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.progress-icon {
+    font-size: 2.5rem;
+}
+
+.progress-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.progress-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.progress-bar-parent {
+    width: 100%;
+    height: 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar-parent .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-yellow));
+    transition: width 0.8s ease;
+}
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.recent-activities h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.recent-activities ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recent-activities li {
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Weekly Report */
+.weekly-report {
+    padding: 100px 0;
+    background: var(--pastel-blue);
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.report-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.report-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* Goals List */
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.goal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: var(--border-radius-small);
+    background: #f8f9ff;
+}
+
+.goal.achieved {
+    background: var(--pastel-green);
+    border-left: 4px solid var(--primary-green);
+}
+
+.goal.in-progress {
+    background: var(--pastel-yellow);
+    border-left: 4px solid var(--primary-yellow);
+}
+
+.goal-text {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.goal-status {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Analytics Chart */
+.analytics-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 200px;
+    padding: 20px 0;
+    background: #f8f9ff;
+    border-radius: var(--border-radius-small);
+    padding: 30px 20px 40px;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.day {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.bar {
+    width: 20px;
+    background: linear-gradient(180deg, var(--primary-blue), var(--primary-purple));
+    border-radius: 4px 4px 0 0;
+    min-height: 20px;
+    transition: height 0.5s ease;
+}
+
+.time {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+/* Achievements List */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9ff;
+    border-radius: var(--border-radius-small);
+    border-left: 4px solid var(--primary-yellow);
+}
+
+.achievement .badge-icon {
+    font-size: 2rem;
+}
+
+.achievement h4 {
+    margin: 0 0 5px 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.achievement p {
+    margin: 0 0 5px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.achievement small {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* Parental Controls */
+.parental-controls {
+    padding: 100px 0;
+    background: white;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.control-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+    border: 2px solid #f0f0f0;
+}
+
+.control-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.control-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.time-setting,
+.goal-setting,
+.safety-setting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.time-setting label,
+.goal-setting label,
+.safety-setting label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 120px;
+}
+
+.time-select,
+input[type="number"],
+input[type="time"],
+select {
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius-small);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.time-select:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.notification-setting {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-setting label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.notification-setting input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-blue);
+}
+
+.save-settings {
+    text-align: center;
+}
+
+/* Support Section */
+.parent-support {
+    padding: 100px 0;
+    background: var(--pastel-green);
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.support-card {
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.support-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.support-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.support-card li {
+    margin-bottom: 10px;
+}
+
+.support-card a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.support-card a:hover {
+    text-decoration: underline;
+}
+
+.help-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.help-options .btn {
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+}
+
+.community-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: var(--border-radius-small);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    font-family: var(--font-heading);
+}
+
+.stat span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Tips Section */
+.parent-tips {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+    text-align: center;
+}
+
+.parent-tips .section-title {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.tips-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+.tip-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: var(--border-radius-large);
+    padding: 40px;
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+.tip-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tip-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.tip-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.tip-card p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tip-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tip-prev,
+.tip-next {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tip-prev:hover,
+.tip-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.tip-indicator {
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+}
+
+/* Parent Footer */
+.parent-footer {
+    background: var(--text-primary);
+    color: var(--text-white);
+    padding: 60px 0 30px;
+}
+
+.parent-footer .footer-section h4 {
+    color: var(--primary-yellow);
+}
+
+/* Responsive Design for Parent Dashboard */
+@media (max-width: 768px) {
+    .parent-welcome h1 {
+        font-size: 2.5rem;
+    }
+    
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .progress-grid,
+    .report-grid,
+    .controls-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .analytics-chart {
+        padding: 20px 10px 30px;
+    }
+    
+    .bar {
+        width: 15px;
+    }
+    
+    .help-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .community-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .tips-carousel {
+        height: 350px;
+    }
+    
+    .tip-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent-welcome {
+        padding: 60px 0;
+    }
+    
+    .parent-welcome h1 {
+        font-size: 2rem;
+    }
+    
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .progress-card,
+    .report-card,
+    .control-card,
+    .support-card {
+        padding: 20px;
+    }
+    
+    .time-setting,
+    .goal-setting,
+    .safety-setting {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .time-setting label,
+    .goal-setting label,
+    .safety-setting label {
+        min-width: auto;
+    }
+}
+
+/* Animation for progress bars */
+@keyframes progressLoad {
+    0% { width: 0%; }
+    100% { width: var(--target-width); }
+}
+
+/* Hover effects for interactive elements */
+.control-card:hover,
+.support-card:hover,
+.report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Focus states for accessibility */
+.time-select:focus,
+input:focus,
+select:focus,
+.btn:focus {
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+/* Print styles for reports */
+@media print {
+    .parent-header,
+    .tip-controls,
+    .help-options,
+    .btn {
+        display: none;
+    }
+    
+    .progress-card,
+    .report-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

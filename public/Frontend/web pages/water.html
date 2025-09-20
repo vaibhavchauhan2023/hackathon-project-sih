@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Water Cycle Adventure</title>
+    <link rel="stylesheet" href="../CSS/water.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <img src="../Asset/Images/upf.png" alt="Mascot Logo">
+        </div>
+        <nav class="main-menu" aria-label="Main Navigation">
+            <a href="#">Home</a> 
+            <a href="#">Missions</a> 
+            <a href="#">Stories</a> 
+            <a href="#">Games</a>
+        </nav>
+        <div class="profile-section">
+            <div class="xp-bar-container" role="status" aria-live="polite" aria-label="Experience Points">
+                <div class="xp-label">LVL 5</div>
+                <div class="xp-bar">
+                    <div id="xp-progress" class="xp-progress" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="avatar">
+                <img src="https://static.vecteezy.com/system/resources/previews/010/079/297/non_2x/illustration-graphic-cartoon-character-of-cute-mascot-water-with-pose-suitable-for-children-book-illustration-and-element-design-free-vector.jpg" alt="User Avatar">
+            </div>
+        </div>
+    </header>
+
+    <main class="adventure-container">
+        <section class="hero-banner" aria-labelledby="adventure-title">
+            <div class="hero-content">
+                <h1 id="adventure-title">💧 The Water Cycle Adventure 💧</h1>
+                <div class="mascot-greeting">
+                    <img src="https://thumbs.dreamstime.com/b/cute-d-cartoon-water-drop-mascot-character-happy-expression-blue-liquid-droplet-big-eyes-rosy-cheeks-gives-thumbs-up-isolated-402526415.jpg" alt="Drippy the Water Droplet Mascot" class="mascot-img" style="border-radius: 50px;">
+                    <div class="speech-bubble" role="alert">
+                        Hi Vedika! I'm Drippy! Ready to go on an amazing journey? Let's become water!
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-wobble" id="start-adventure-btn">
+                    🌊 Let's Start the Splash! 🌊
+                </button>
+            </div>
+        </section>
+
+        <div id="stages-container">
+            <section id="stage-1" class="stage-card evaporation" data-stage="1" aria-labelledby="stage-1-title">
+                <div class="stage-header">
+                    <h2 id="stage-1-title">Stage 1: The Great Escape! (Evaporation)</h2>
+                    <div class="completion-mark" aria-hidden="true">✓</div>
+                </div>
+                <p>The sun is warming us up! We're changing into a gas called 'water vapor' and floating up!</p>
+                <div class="mini-game">
+                    <button id="evaporation-btn" class="btn btn-secondary">☀ Float Up! ☀</button>
+                </div>
+                <div class="lock-overlay" aria-hidden="true">🔒 Locked</div>
+            </section>
+
+            <section id="stage-2" class="stage-card condensation" data-stage="2" aria-labelledby="stage-2-title">
+                <div class="stage-header">
+                    <h2 id="stage-2-title">Stage 2: Cloud Cuddle! (Condensation)</h2>
+                    <div class="completion-mark" aria-hidden="true">✓</div>
+                </div>
+                <p>Drag the droplets to form a big, fluffy cloud.</p>
+                <div class="mini-game">
+                    <div class="cloud-builder-container">
+                        <div id="cloud-outline" class="droppable" aria-label="Cloud formation area"></div>
+                        <div class="droplet-source" aria-label="Water droplets to drag">
+                            <div class="droplet" draggable="true" aria-label="Water droplet">💧</div>
+                            <div class="droplet" draggable="true" aria-label="Water droplet">💧</div>
+                            <div class="droplet" draggable="true" aria-label="Water droplet">💧</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lock-overlay" aria-hidden="true">🔒 Locked</div>
+            </section>
+
+            <section id="stage-3" class="stage-card precipitation" data-stage="3" aria-labelledby="stage-3-title">
+                <div class="stage-header">
+                    <h2 id="stage-3-title">Stage 3: The Big Drop! (Precipitation)</h2>
+                    <div class="completion-mark" aria-hidden="true">✓</div>
+                </div>
+                <p>Our cloud is full! How should we fall back to Earth?</p>
+                <div class="interactive-choice" role="group" aria-label="Choose form of precipitation">
+                    <button class="choice-card rain"><h3>💧 As Rain</h3></button>
+                    <button class="choice-card snow"><h3>❄ As Snow</h3></button>
+                    <button class="choice-card hail"><h3>🧊 As Hail</h3></button>
+                </div>
+                <div class="lock-overlay" aria-hidden="true">🔒 Locked</div>
+            </section>
+
+            <section id="stage-4" class="stage-card collection" data-stage="4" aria-labelledby="stage-4-title">
+                <div class="stage-header">
+                    <h2 id="stage-4-title">Stage 4: Splash Landing! (Collection)</h2>
+                    <div class="completion-mark" aria-hidden="true">✓</div>
+                </div>
+                <p>We've collected in the rivers and lakes! Time for a final check!</p>
+                <div class="mini-game" role="radiogroup" aria-labelledby="quiz-question">
+                    <strong id="quiz-question">What are clouds made of?</strong>
+                    <div class="quiz-options">
+                        <button class="btn-quiz" role="radio">Sunshine</button>
+                        <button class="btn-quiz" role="radio" data-correct="true">Tiny Water Droplets</button>
+                        <button class="btn-quiz" role="radio">Fluffy Cotton</button>
+                    </div>
+                </div>
+                <div class="lock-overlay" aria-hidden="true">🔒 Locked</div>
+            </section>
+        </div>
+    </main>
+    
+    <div id="mission-complete-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h1 id="modal-title">🎉 MISSION COMPLETE! 🎉</h1>
+            <p>You did it, Vedika! You're officially a Water Wizard!</p>
+            <div class="badge-unlocked">
+                <h3>New Badge Unlocked!</h3>
+                <div class="badge-icon" aria-hidden="true">💧</div>
+                <strong>WATER WIZARD</strong>
+            </div>
+            <div class="modal-buttons">
+                <a href="#" class="btn btn-badge">🏆 Add Badge to My Profile</a>
+                <a href="#" class="btn btn-secondary">🌍 Back to Science World</a>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="ding-sound" src="https://actions.google.com/sounds/v1/events/success.ogg" preload="auto"></audio>
+</body>
+<script src="water.js"></script>
+</html>

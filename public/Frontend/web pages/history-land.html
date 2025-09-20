@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian History Land - Terra Learning</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/history-land.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="history-body">
+    <!-- Header -->
+    <header class="header history-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://images.stockcake.com/public/2/c/4/2c4106b0-4559-4900-9b23-a93d0d121e4d_large/educational-robot-magic-stockcake.jpg" alt="Terra" class="logo">
+                    <span class="logo-text">Terra</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"> Home</a></li>
+                <li><a href="#timeline" class="nav-link active">Timeline</a></li>
+                <li><a href="#heroes" class="nav-link">Freedom Fighters</a></li>
+                <li><a href="#culture" class="nav-link">Culture</a></li>
+                <li><a href="#progress" class="nav-link"> Journey</a></li>
+            </ul>
+            <div class="user-info">
+                <div class="xp-bar">
+                    <div class="xp-fill" data-xp="25"></div>
+                    <span class="xp-text">Level 5</span>
+                </div>
+                <div class="history-treasures">
+                    <span class="treasure-icon">💎</span>
+                    <span class="treasure-count">85</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="history-hero">
+        <div class="hero-bg">
+            <div class="floating-heritage">
+                <div class="heritage-item">🏛️</div>
+                <div class="heritage-item">📜</div>
+                <div class="heritage-item">⚔️</div>
+                <div class="heritage-item">🕉️</div>
+                <div class="heritage-item">🎭</div>
+                <div class="heritage-item">🐘</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="history-title">Welcome to Indian History Land! 📜</h1>
+                <p class="history-subtitle">Journey through India's glorious past, meet brave freedom fighters, and discover our rich heritage!</p>
+                
+                <div class="world-progress-card">
+                    <h3>Your History Journey</h3>
+                    <div class="progress-info">
+                        <div class="progress-circle">
+                            <svg class="progress-ring" width="80" height="80">
+                                <circle class="progress-ring-circle" cx="40" cy="40" r="36" stroke="#FF6B35" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="170"></circle>
+                            </svg>
+                            <div class="progress-text">25%</div>
+                        </div>
+                        <div class="progress-details">
+                            <p><strong>5</strong> stories learned</p>
+                            <p><strong>3</strong> heroes met</p>
+                            <p><strong>2</strong> treasures found</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title">Journey Through Time! 🕰️</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <!-- Ancient India -->
+                    <div class="timeline-period completed" data-period="ancient">
+                        <div class="period-marker">
+                            <span class="period-icon">🏛️</span>
+                        </div>
+                        <div class="period-content">
+                            <h3>Ancient India</h3>
+                            <span class="period-dates">3300 BCE - 550 CE</span>
+                            <p>Explore the Indus Valley Civilization, Vedic period, and great empires!</p>
+                            <div class="period-achievements">⭐⭐⭐ Completed</div>
+                        </div>
+                    </div>
+
+                    <!-- Medieval India -->
+                    <div class="timeline-period current" data-period="medieval">
+                        <div class="period-marker">
+                            <span class="period-icon">🏰</span>
+                        </div>
+                        <div class="period-content">
+                            <h3>Medieval India</h3>
+                            <span class="period-dates">550 CE - 1526 CE</span>
+                            <p>Discover great kingdoms, art, and architecture!</p>
+                            <div class="period-progress">40% Complete</div>
+                        </div>
+                    </div>
+
+                    <!-- Mughal Era -->
+                    <div class="timeline-period available" data-period="mughal">
+                        <div class="period-marker">
+                            <span class="period-icon">🕌</span>
+                        </div>
+                        <div class="period-content">
+                            <h3>Mughal Era</h3>
+                            <span class="period-dates">1526 - 1857</span>
+                            <p>Learn about the great Mughal emperors and their legacy!</p>
+                            <div class="period-reward">+60 XP</div>
+                        </div>
+                    </div>
+
+                    <!-- Freedom Struggle -->
+                    <div class="timeline-period locked" data-period="freedom">
+                        <div class="period-marker">
+                            <span class="period-icon">🔒</span>
+                        </div>
+                        <div class="period-content">
+                            <h3>Freedom Struggle</h3>
+                            <span class="period-dates">1857 - 1947</span>
+                            <p>Meet our brave freedom fighters!</p>
+                            <div class="period-unlock">Unlock Level 6</div>
+                        </div>
+                    </div>
+
+                    <!-- Modern India -->
+                    <div class="timeline-period locked" data-period="modern">
+                        <div class="period-marker">
+                            <span class="period-icon">🔒</span>
+                        </div>
+                        <div class="period-content">
+                            <h3>Modern India</h3>
+                            <span class="period-dates">1947 - Present</span>
+                            <p>Discover Independent India's journey!</p>
+                            <div class="period-unlock">Unlock Level 7</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freedom Fighters Section -->
+    <section class="heroes-section" id="heroes">
+        <div class="container">
+            <h2 class="section-title">Meet Our Freedom Heroes! 🦸‍♂️</h2>
+            
+            <div class="heroes-grid">
+                <div class="hero-card gandhi">
+                    <div class="hero-portrait">
+                        <div class="hero-icon">🕊️</div>
+                        <div class="hero-name">Mahatma Gandhi</div>
+                    </div>
+                    <div class="hero-info">
+                        <h4>The Father of Nation</h4>
+                        <p>Led India's freedom through non-violence and truth!</p>
+                        <div class="hero-facts">
+                            <span class="fact">✊ Satyagraha Leader</span>
+                            <span class="fact">🧘 Ahimsa Believer</span>
+                        </div>
+                        <button class="btn btn-hero">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="hero-card nehru">
+                    <div class="hero-portrait">
+                        <div class="hero-icon">🌹</div>
+                        <div class="hero-name">Jawaharlal Nehru</div>
+                    </div>
+                    <div class="hero-info">
+                        <h4>Chacha Nehru</h4>
+                        <p>First Prime Minister and children's favorite uncle!</p>
+                        <div class="hero-facts">
+                            <span class="fact">🏛️ First PM</span>
+                            <span class="fact">👶 Children's Day</span>
+                        </div>
+                        <button class="btn btn-hero">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="hero-card azad">
+                    <div class="hero-portrait">
+                        <div class="hero-icon">⚔️</div>
+                        <div class="hero-name">Chandrashekhar Azad</div>
+                    </div>
+                    <div class="hero-info">
+                        <h4>The Fearless Revolutionary</h4>
+                        <p>Brave freedom fighter who never gave up!</p>
+                        <div class="hero-facts">
+                            <span class="fact">🔥 Revolutionary</span>
+                            <span class="fact">💪 Never Surrendered</span>
+                        </div>
+                        <button class="btn btn-hero locked">🔒 Level 6</button>
+                    </div>
+                </div>
+
+                <div class="hero-card bhagat">
+                    <div class="hero-portrait">
+                        <div class="hero-icon">🌟</div>
+                        <div class="hero-name">Bhagat Singh</div>
+                    </div>
+                    <div class="hero-info">
+                        <h4>The Young Martyr</h4>
+                        <p>Young hero who sacrificed everything for freedom!</p>
+                        <div class="hero-facts">
+                            <span class="fact">⚡ Shaheed</span>
+                            <span class="fact">📚 Inquilab Zindabad</span>
+                        </div>
+                        <button class="btn btn-hero locked">🔒 Level 6</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Story Section -->
+    <section class="story-section" id="culture">
+        <div class="container">
+            <h2 class="section-title">Interactive History Stories! 📚</h2>
+            
+            <div class="story-container">
+                <div class="story-card active">
+                    <div class="story-header">
+                        <h3>The Tale of Two Cities: Harappa & Mohenjo-daro</h3>
+                        <div class="story-progress">
+                            <span>Chapter 1 of 5</span>
+                            <div class="story-progress-bar">
+                                <div class="story-progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-content">
+                        <div class="story-illustration">
+                            <div class="story-scene indus-valley">
+                                <div class="character archaeologist">🔍</div>
+                                <div class="background-element city">🏛️</div>
+                                <div class="background-element river">🌊</div>
+                            </div>
+                        </div>
+                        
+                        <div class="story-text">
+                            <p>"Welcome, young explorer! I'm Dr. Sharma, an archaeologist. Today, we're traveling back 4500 years to discover the amazing Indus Valley Civilization!"</p>
+                            
+                            <div class="story-choice">
+                                <p><strong>What would you like to explore first?</strong></p>
+                                <div class="choice-buttons">
+                                    <button class="choice-btn" data-choice="city">🏙️ The Great Cities</button>
+                                    <button class="choice-btn" data-choice="culture">🎭 Their Culture</button>
+                                    <button class="choice-btn" data-choice="mystery">❓ The Mystery</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Games Section -->
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">History Games & Activities! 🎮</h2>
+            
+            <div class="games-grid">
+                <div class="game-card timeline-puzzle">
+                    <div class="game-icon">🧩</div>
+                    <h3>Timeline Puzzle</h3>
+                    <p>Arrange historical events in the correct order and learn about chronology!</p>
+                    <div class="game-difficulty">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="time">⏱️ 10 min</span>
+                    </div>
+                    <button class="btn btn-game">Play Now</button>
+                </div>
+
+                <div class="game-card monument-match">
+                    <div class="game-icon">🏯</div>
+                    <h3>Monument Match</h3>
+                    <p>Match famous Indian monuments with their builders and time periods!</p>
+                    <div class="game-difficulty">
+                        <span class="difficulty medium">Medium</span>
+                        <span class="time">⏱️ 15 min</span>
+                    </div>
+                    <button class="btn btn-game">Play Now</button>
+                </div>
+
+                <div class="game-card freedom-quiz">
+                    <div class="game-icon">🎯</div>
+                    <h3>Freedom Fighter Quiz</h3>
+                    <p>Test your knowledge about India's brave freedom fighters!</p>
+                    <div class="game-difficulty">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="time">⏱️ 8 min</span>
+                    </div>
+                    <button class="btn btn-game locked">🔒 Level 6</button>
+                </div>
+
+                <div class="game-card culture-creator">
+                    <div class="game-icon">🎨</div>
+                    <h3>Culture Creator</h3>
+                    <p>Create your own Indian festival celebration and learn about traditions!</p>
+                    <div class="game-difficulty">
+                        <span class="difficulty hard">Advanced</span>
+                        <span class="time">⏱️ 25 min</span>
+                    </div>
+                    <button class="btn btn-game">Play Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section" id="progress">
+        <div class="container">
+            <h2 class="section-title">Your Historical Achievements! 🏆</h2>
+            
+            <div class="achievements-container">
+                <div class="achievement-grid">
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">🏛️</div>
+                        <h4>Ancient Explorer</h4>
+                        <p>Discovered the Indus Valley Civilization</p>
+                        <div class="badge-date">Earned 4 days ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge earned">
+                        <div class="badge-glow"></div>
+                        <div class="badge-icon">📚</div>
+                        <h4>Story Seeker</h4>
+                        <p>Completed 3 interactive history stories</p>
+                        <div class="badge-date">Earned 2 days ago</div>
+                    </div>
+                    
+                    <div class="achievement-badge in-progress">
+                        <div class="badge-icon">🏰</div>
+                        <h4>Medieval Master</h4>
+                        <p>Explore medieval Indian kingdoms</p>
+                        <div class="badge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span>2/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">🦸‍♂️</div>
+                        <h4>Freedom Fighter Friend</h4>
+                        <p>Meet all freedom fighters</p>
+                        <div class="badge-requirement">Unlock Level 6</div>
+                    </div>
+                    
+                    <div class="achievement-badge locked">
+                        <div class="badge-icon">👑</div>
+                        <h4>History Master</h4>
+                        <p>Complete all History Land adventures</p>
+                        <div class="badge-requirement">Complete all periods</div>
+                    </div>
+                    
+                    <div class="achievement-badge mystery">
+                        <div class="badge-icon">❓</div>
+                        <h4>Time Traveler</h4>
+                        <p>A special surprise awaits!</p>
+                        <div class="badge-requirement">???</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Showcase -->
+    <section class="culture-showcase">
+        <div class="container">
+            <h2 class="section-title">Incredible Indian Culture! 🎭</h2>
+            
+            <div class="culture-carousel">
+                <div class="culture-item active">
+                    <div class="culture-visual">
+                        <div class="culture-icon">🎪</div>
+                        <h3>Festivals of India</h3>
+                    </div>
+                    <div class="culture-description">
+                        <p>India celebrates colorful festivals throughout the year! From Diwali's lights to Holi's colors, each festival has a beautiful story.</p>
+                        <div class="culture-examples">
+                            <span class="example">🪔 Diwali</span>
+                            <span class="example">🎨 Holi</span>
+                            <span class="example">🎪 Durga Puja</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="culture-controls">
+                <button class="culture-prev">‹</button>
+                <span class="culture-indicator">1 / 4</span>
+                <button class="culture-next">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Mascot -->
+    <div class="history-mascot" id="historyMascot">
+        <div class="mascot-bubble">
+            <p class="mascot-text">Fantastic! You learned about ancient India! Ready to explore medieval kingdoms? 🏰</p>
+        </div>
+        <div class="mascot-character history-character">
+            <span class="mascot-icon">📜</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer history-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Indian History Land</h4>
+                    <p>Discover India's rich heritage and learn from our glorious past!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Back to Terra</a></li>
+                        <li><a href="parents.html">Parent Dashboard</a></li>
+                        <li><a href="#help">History Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Other Worlds</h4>
+                    <ul>
+                        <li><a href="science-world.html">Science World</a></li>
+                        <li><a href="math-galaxy.html">Math Galaxy</a></li>
+                        <li><a href="life-skills.html">Life Skills Village</a></li>
+                        <li><a href="creative-corner.html">Creative Corner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/history-land.js"></script>
+</body>
+</html>
