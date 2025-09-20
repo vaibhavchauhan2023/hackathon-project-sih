@@ -8,6 +8,10 @@
     background: linear-gradient(135deg, #3181de 0%, #1565C0 100%);
 }
 
+a{
+    text-decoration: none;
+}
+
 .science-header .logo-container a {
     display: flex;
     align-items: center;
@@ -41,6 +45,7 @@
 
 /* Hero Section */
 .science-hero {
+    font-family: "Feather";
     min-height: 80vh;
     position: relative;
     background: linear-gradient(135deg, #4446e7 0%, #0097A7 100%);
